@@ -11,4 +11,7 @@ class School < ActiveHash::Base
     { id: 9, name: '独学' },
     { id: 10, name: 'その他' }
   ]
+
+    include ActiveHash::Associations
+    has_many :users
   end
