@@ -3,4 +3,12 @@ ja:
    attributes:
      user:
        name: 名前
-       school: スクール
+       school_id: スクール
+     app:
+       name: アプリ名
+       image: 画像
+       description: アプリの説明
+       reference: アプリのURL
+       language: プログラミング言語
+       point: 技術的ポイント
+       period: 開発期間（日）
