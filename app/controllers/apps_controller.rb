@@ -10,9 +10,10 @@ class AppsController < ApplicationController
   def create
     @app = App.new(app_params)
     if @app.save
-      flash[:success] = "投稿が完了しました！"
+      flash[:notice] = "投稿が完了しました！"
       redirect_to root_path
     else
+      flash[:alert] = "投稿できませんでした"
       render :new
     end
   end
