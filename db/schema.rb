@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(version: 2020_11_20_055813) do
   create_table "apps", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.text "description", null: false
-    t.string "point"
+    t.string "language", null: false
+    t.text "point"
     t.string "reference"
     t.integer "period"
     t.datetime "created_at", precision: 6, null: false
