@@ -56,3 +56,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'active_hash'
 gem 'bootstrap-sass'
+gem 'rails-i18n'
