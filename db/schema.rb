@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_11_20_062044) do
     t.text "description", null: false
     t.string "language", null: false
     t.text "point"
-    t.string "reference"
+    t.string "reference", null: false
     t.integer "period"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
