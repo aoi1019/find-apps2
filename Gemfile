@@ -61,3 +61,6 @@ gem 'devise'
 gem 'active_hash'
 gem 'bootstrap-sass'
 gem 'rails-i18n'
+#画像gem
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'
