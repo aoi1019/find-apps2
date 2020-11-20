@@ -4,6 +4,6 @@ class App < ApplicationRecord
 
   validates :name, presence: true
   validates :language, presence: true
-  validates :references, presence: true
+  validates :reference, presence: true
   validates :image, presence: true
 end
