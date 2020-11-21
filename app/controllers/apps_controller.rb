@@ -36,6 +36,12 @@ class AppsController < ApplicationController
     end
   end
 
+  def destroy
+    @app.destroy
+    flash[:notice] = "削除が完了しました！"
+    redirect_to root_path
+  end
+
   private
     def app_params
       params.require(:app).permit(:name, :description, :reference, :point, :language, :period, :image).merge(user_id: current_user.id)
