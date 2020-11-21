@@ -1,4 +1,6 @@
 class AppsController < ApplicationController
+  before_action :set_app, only: [:show, :edit, :update, :destroy]
+
   def index
     @apps = App.includes(:user).order("created_at DESC")
   end
@@ -18,8 +20,28 @@ class AppsController < ApplicationController
     end
   end
 
+  def show 
+  end
+
+  def edit
+  end
+
+  def update
+    if @app.update(app_params)
+      flash[:notice] = "編集が完了しました！"
+      redirect_to root_path
+    else
+      flash[:alert] = "投稿できませんでした"
+      render :edit
+    end
+  end
+
   private
     def app_params
       params.require(:app).permit(:name, :description, :reference, :point, :language, :period, :image).merge(user_id: current_user.id)
+    end
+
+    def set_app
+      @post = App.find(params[:id])
     end
 end
