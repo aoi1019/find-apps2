@@ -33,7 +33,7 @@
         </tr>
         <tr>
           <th class="detail-app">アプリのURL</th>
-          <td class="detail-value"><%= @app.reference %></td>
+          <td class="detail-value"><%= link_to "#{@app.reference}", @app.reference, target: :_blank %></td>
         </tr>
       </tbody>
     </table>
