@@ -31,7 +31,7 @@ class AppsController < ApplicationController
       flash[:notice] = "編集が完了しました！"
       redirect_to root_path
     else
-      flash[:alert] = "投稿できませんでした"
+      flash[:alert] = "編集できませんでした"
       render :edit
     end
   end
@@ -48,6 +48,6 @@ class AppsController < ApplicationController
     end
 
     def set_app
-      @post = App.find(params[:id])
+      @app = App.find(params[:id])
     end
 end

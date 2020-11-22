@@ -1,4 +1,5 @@
 .app-contents {
+  margin-top: -70px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,13 +9,6 @@
     line-height: 1.5;
     font-weight: bold;
     text-align: center;
-  }
-  .subtitle {
-    font-size: 3vh;
-    margin: 1vh 0;
-    text-decoration: none;
-    color: #3ccace;
-    font-weight: bold;
   }
   .app-lists {
     width: 100vw;
@@ -53,6 +47,7 @@
 }
 
 .main_container {
+  margin-top: -10px;
   padding: 24px;
 }
 
