@@ -20,10 +20,11 @@ class AppsController < ApplicationController
     end
   end
 
-  def show 
+  def show
   end
 
   def edit
+    redirect_to root_path unless current_user.id == @app.user_id
   end
 
   def update
