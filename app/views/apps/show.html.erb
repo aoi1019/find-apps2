@@ -1,0 +1,41 @@
+<div class="app-show">
+  <div class="app-box">
+    <h2 class="app-name">
+      <%= @app.name %>
+    </h2>
+    <div class="app-img-content">
+      <%= image_tag @app.image ,class:"app-box-img" %>
+    <div>
+    <div class="user-button">
+       <%= link_to "アプリの編集", edit_app_path(@app.id), class: 'btn btn-success edit-btn' %>
+       <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当に削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
+    </div>
+    <div class="app-description-box">
+      <span><%= @app.description %></span>
+    </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-app">開発者</th>
+          <td class="detail-value"><%= @app.user.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-app">開発プログラミング言語</th>
+          <td class="detail-value"><%= @app.language %></td>
+        </tr>
+        <tr>
+          <th class="detail-app">技術的なポイント</th>
+          <td class="detail-value"><%= @app.point %></td>
+        </tr>
+        <tr>
+          <th class="detail-app">開発期間</th>
+          <td class="detail-value"><%= @app.period %></td>
+        </tr>
+        <tr>
+          <th class="detail-app">アプリのURL</th>
+          <td class="detail-value"><%= @app.reference %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
