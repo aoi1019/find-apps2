@@ -9,7 +9,7 @@
     <% if user_signed_in? && current_user.id == @app.user_id %>
     <div class="user-button">
        <%= link_to "アプリの編集", edit_app_path(@app.id), class: 'btn btn-success edit-btn' %>
-       <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当に削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
+       <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当にこの投稿を削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
     </div>
     <% end %>
     <div class="app-description-box">
@@ -56,7 +56,7 @@
                 </div>
                 <% if user_signed_in? && current_user.id == comment.user_id %>
                 <div class="comment-destroy">
-                  <%= link_to "削除", app_comment_path(comment), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: "本当に削除して良いですか？" } %>
+                  <%= link_to "削除", app_comment_path(comment), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: "本当にコメントを削除して良いですか？" } %>
                 </div>
                 <% end %>
                 <div class="comment_created_at">
