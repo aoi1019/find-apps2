@@ -59,3 +59,61 @@
     }
   }
 }
+
+.layout {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.layout.column {
+  flex-direction: column;
+}
+
+.comment_container {
+  max-width: 640px;
+  margin: 40px auto 0;
+  .reviews {
+    margin: 24px 0;
+  }
+}
+.align-center {
+  align-items: center!important;
+}
+
+.first_row{
+  .comment_user_name {
+    margin: 0 10px;
+    font-family: Hiragino Kaku Gothic ProN;
+  }
+  .comment_created_at {
+    margin-right: 10px;
+    font-size: 13px;
+    font-family: Helvetica Neue;
+  }
+}
+
+
+
+.post_review_container {
+  max-width: 640px;
+  margin: 20px auto 0;
+  background-color: #f7f9f9;
+}
+.align-center {
+  align-items: center!important;
+}
+.justify-center {
+    justify-content: center!important;
+}
+
+.comment-btn {
+  line-height: 48px;
+  color: #fff;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+}
