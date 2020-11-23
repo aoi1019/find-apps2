@@ -100,7 +100,22 @@
   max-width: 640px;
   margin: 20px auto 0;
   background-color: #f7f9f9;
+  .post_review_inner_container {
+    margin: 40px auto;
+    .container_M {
+      margin-bottom: 30px;
+      .review_body_container .comment_title {
+        font-weight: 700;
+        margin-bottom: 5px;
+        .comment_area {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
 }
+
+
 .align-center {
   align-items: center!important;
 }
@@ -116,4 +131,20 @@
   font-size: 18px;
   border-radius: 100px;
   margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.comment_area_title {
+  font-size: 25px;
+  padding:10px;
+  background-color: #337ab7;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid skyblue;
+  text-align: center;
+}
+
+.container_bLYok {
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 20px;
 }
