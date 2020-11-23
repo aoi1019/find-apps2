@@ -53,6 +53,11 @@
                 <div class="comment_user_name">
                   <%= comment.user.name %>
                 </div>
+                <% if user_signed_in? && current_user.id == comment.user_id %>
+                <div class="comment-destroy">
+                  <%= link_to "削除", app_comment_path(comment), method: :delete, class: 'btn btn-danger btn-sm', data: { confirm: "本当に削除して良いですか？" } %>
+                </div>
+                <% end %>
                 <div class="comment_created_at">
                   <%# comment.created_at %>
                 </div>
