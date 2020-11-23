@@ -84,6 +84,7 @@
 
 .first_row{
   .comment_user_name {
+    font-weight: bold;
     margin: 0 10px;
     font-family: Hiragino Kaku Gothic ProN;
   }
@@ -91,6 +92,12 @@
     margin-right: 10px;
     font-size: 13px;
     font-family: Helvetica Neue;
+  }
+}
+
+.third_row {
+  .comment_user_text {
+    margin: 0 10px;
   }
 }
 
