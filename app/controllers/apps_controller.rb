@@ -1,5 +1,6 @@
 class AppsController < ApplicationController
   before_action :set_app, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @apps = App.includes(:user).order("created_at DESC")
@@ -52,5 +53,11 @@ class AppsController < ApplicationController
 
     def set_app
       @app = App.find(params[:id])
+    end
+
+    def move_to_index
+      unless user_signed_in?
+        redirect_to root_path
+      end
     end
 end
