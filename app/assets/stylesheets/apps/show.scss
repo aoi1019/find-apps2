@@ -59,3 +59,113 @@
     }
   }
 }
+
+.layout {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+
+.layout.column {
+  flex-direction: column;
+}
+
+.comment_container {
+  max-width: 640px;
+  margin: 40px auto 0;
+  .reviews {
+    margin: 24px 0;
+  }
+}
+.align-center {
+  align-items: center!important;
+}
+
+.first_row{
+  margin: 10px 0;
+  .comment_user_name {
+    font-weight: bold;
+    margin: 0 10px;
+    font-family: Hiragino Kaku Gothic ProN;
+  }
+  .comment_created_at {
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    padding: 0 10px;
+    margin: 0 10px;
+    font-size: 13px;
+    font-family: Helvetica Neue;
+  }
+}
+
+.third_row {
+  margin: 10px 0;
+  .comment_user_text {
+    margin: 0 10px;
+  }
+}
+
+
+
+.post_review_container {
+  max-width: 640px;
+  margin: 20px auto 0;
+  background-color: #f7f9f9;
+  .post_review_inner_container {
+    margin: 40px auto;
+    .container_M {
+      margin-bottom: 30px;
+      .review_body_container .comment_title {
+        font-weight: 700;
+        margin-bottom: 5px;
+        .comment_area {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+.align-center {
+  align-items: center!important;
+}
+.justify-center {
+    justify-content: center!important;
+}
+
+.comment-btn {
+  line-height: 48px;
+  color: #fff;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.comment_area_title {
+  font-size: 25px;
+  padding:10px;
+  background-color: #337ab7;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid skyblue;
+  text-align: center;
+}
+
+.container_bLYok {
+  border-bottom: 1px solid #d8d8d8;
+  margin-bottom: 20px;
+}
+
+.comment-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}

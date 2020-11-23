@@ -7,7 +7,7 @@
         <div class="app-content">
           <div class="card section">
             <div class="eyecatch_container app-img-content">
-              <%= image_tag app.image.variant(resize: '500x500'), class: 'eyecatch app-img' %>
+            <%= link_to image_tag(app.image, class: 'eyecatch app-img' ), app_path(app.id), method: :get %>
             </div>
             <div class="main_container">
               <div class="timeline_header">
