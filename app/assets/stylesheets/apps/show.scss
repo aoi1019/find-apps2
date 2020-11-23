@@ -90,7 +90,10 @@
     font-family: Hiragino Kaku Gothic ProN;
   }
   .comment_created_at {
-    margin-right: 10px;
+    border-left: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    padding: 0 10px;
+    margin: 0 10px;
     font-size: 13px;
     font-family: Helvetica Neue;
   }
