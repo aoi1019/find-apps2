@@ -1,8 +1,11 @@
 class CommentsController < ApplicationController
   def create
-    comment = Comment.create(comment_params)
-    flash[:notice] = "コメントしました"
-    redirect_to "/apps/#{comment.app.id}"
+    if comment = Comment.create(comment_params)
+      flash[:notice] = "コメントしました"
+      redirect_to "/apps/#{comment.app.id}"
+    else
+      flash[:alert] = "コメントできません"
+    end
   end
 
   def destroy
