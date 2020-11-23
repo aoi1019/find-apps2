@@ -12,6 +12,10 @@ ja:
        language: プログラミング言語
        point: 技術的ポイント
        period: 開発期間（日）
+     comment:
+       content: コメント
+       user_id: コメント投稿者
+       app_id: アプリ
  time:
    formats:
      default: "%Y/%m/%d %H:%M:%S"      
