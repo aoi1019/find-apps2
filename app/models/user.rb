@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :school
+  has_one_attached :image
   has_many :apps, dependent: :destroy
   has_many :comments, dependent: :destroy
   validates :name, presence: true
