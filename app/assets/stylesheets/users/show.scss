@@ -1,0 +1,27 @@
+.user-content {
+  margin-top: 70px;
+  .user-title {
+    font-size: 4vh;
+    line-height: 1.5;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+  .detail-user {
+    width: 20%;
+    background-color: #337ab7;
+    color: white;
+    border: 1px solid #dedede;
+    font-size: 14px;
+    text-align: center;
+  }
+  .detail-value {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid #dedede;
+    font-size: 14px;
+  }
+}
