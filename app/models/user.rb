@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :school
-  has_many :apps
-  has_many :comments
+  has_many :apps, dependent: :destroy
+  has_many :comments, dependent: :destroy
   validates :name, presence: true
 
   #ジャンルの選択が「--」の時は保存できないようにする
