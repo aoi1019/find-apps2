@@ -2,7 +2,7 @@
 lock '3.14.1'
 
 # Capistranoのログの表示に利用する
-set :application, 'findapps'
+set :application, 'find-apps2'
 
 # どのリポジトリからアプリをpullするかを指定する
 set :repo_url,  'git@github.com:aoi1019/find-apps2.git'
