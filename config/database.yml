@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: find_apps2_production
-  username: find_apps2
-  password: <%= ENV['FIND_APPS2_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
