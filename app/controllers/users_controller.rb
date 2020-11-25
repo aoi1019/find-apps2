@@ -5,4 +5,10 @@ class UsersController < ApplicationController
     @name = current_user.name
     @apps = current_user.apps
   end
+
+  def edit
+  end
+
+  def update
+  end
 end
