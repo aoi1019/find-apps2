@@ -18,4 +18,4 @@ ja:
        app_id: アプリ
  time:
    formats:
-     default: "%Y/%m/%d %H:%M:%S"      
+     default: "%Y/%m/%d"      
