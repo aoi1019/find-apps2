@@ -1,23 +1,24 @@
-.app-contents {
+.app_contents {
   // margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10vh 0;
-  .apps-title {
+  .apps_title {
+    width: 100%;
     font-size: 4vh;
     line-height: 1.5;
     font-weight: bold;
     text-align: center;
   }
-  .app-lists {
+  .app_lists {
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    .app-img-content {
+    .app_img_content {
       position: relative;
-      .app-img {
+      .app_img {
         width: 45vh;
         height: 33vh;
       }
@@ -25,7 +26,7 @@
   }
 }
 
-.app-content {
+.app_content {
   margin: 30px;
 }
 
@@ -122,4 +123,47 @@
   color:#133e8d;
   font-weight: bold;
   margin-left: 10px;
+}
+
+// .user_icon {
+//   margin-top:15px;
+//   width: 7vh;
+//   height: 7vh;
+//   border-radius: 50px;
+// }
+
+.timeline_footer {
+  display: flex;
+  height: 50px;
+  margin-top: 10px;
+  .user_container {
+    display: flex;
+    align-items: flex-end;
+    .user_icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #dfdfdf;
+      border-radius: 22px;
+      position: relative;
+    }
+    .user_info {
+      display: flex;
+      flex-flow: column;
+      margin-left: 16px;
+      .user_name {
+        font-size: 12px;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 7px;
+      }
+      .app_date {
+        font-size: 12px;
+      } 
+    }
+  }
 }

@@ -1,18 +1,19 @@
-<div class="container user-content">
-  <h2 class="user-title"><%= @name %>さんのプロフィール</h2>
+<div class="container user_content">
+  <h2 class="user_title title_border"><%= @name %>さんのプロフィール</h2>
   <div class="row">
     <div class="col-md-4">
+      <%= image_tag @user.image.variant(resize: '300x300'), class: 'eyecatch user_img'  %>
     </div>
     <div class="col-md-8">
-      <table class="detail-table">
+      <table class="detail_table">
       <tbody>
         <tr>
-          <th class="detail-user">名前</th>
-          <td class="detail-value"><%= @user.name %></td>
+          <th class="detail_user">名前</th>
+          <td class="detail_value"><%= @user.name %></td>
         </tr>
         <tr>
-          <th class="detail-user">出身スクール</th>
-          <td class="detail-value"><%= @user.school.name %></td>
+          <th class="detail_user">出身スクール</th>
+          <td class="detail_value"><%= @user.school.name %></td>
         </tr>
       </tbody>
     </table>
@@ -20,16 +21,16 @@
   </div>
 </div>
 
-<div class="container app-contents">
-  <h2 class="apps-title"><%= @name %>さんが開発したアプリ(<%= @apps.count %>)</h2>
-  <ul class="app-lists">
+<div class="container app_contents">
+  <h2 class="apps_title title_border"><%= @name %>さんが開発したアプリ(<%= @apps.count %>)</h2>
+  <ul class="app_lists">
     <% @apps.each do |app| %>
     <li class="list">
       <%= link_to app_path(app) do %>
-        <div class="app-content">
+        <div class="app_content">
           <div class="card section">
-            <div class="eyecatch_container app-img-content">
-            <%= link_to image_tag(app.image, class: 'eyecatch app-img' ), app_path(app.id), method: :get %>
+            <div class="eyecatch_container app_img_content">
+            <%= link_to image_tag(app.image, class: 'eyecatch app_img' ), app_path(app.id), method: :get %>
             </div>
             <div class="main_container">
               <div class="timeline_header">

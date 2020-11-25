@@ -1,16 +1,17 @@
-.user-content {
+.user_content {
   margin-top: 70px;
-  .user-title {
+  .user_title {
     font-size: 4vh;
     line-height: 1.5;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 30px;
   }
 }
-.detail-table {
+.detail_table {
   margin-bottom: 30px;
   width: 100%;
-  .detail-user {
+  .detail_user {
     width: 20%;
     background-color: #337ab7;
     color: white;
@@ -18,10 +19,16 @@
     font-size: 14px;
     text-align: center;
   }
-  .detail-value {
+  .detail_value {
     width: 80%;
     padding: 20px;
     border: 1px solid #dedede;
     font-size: 14px;
   }
+}
+
+.user_img {
+  width: 33vh;
+  height: 33vh;
+  border-radius: 50px;
 }
