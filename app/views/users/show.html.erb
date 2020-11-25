@@ -1,5 +1,28 @@
+<div class="container user_content">
+  <h2 class="user_title title_border"><%= @user.name %>さんのプロフィール</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <%= image_tag @user.image.variant(resize: '300x300'), class: 'eyecatch user_img'  %>
+    </div>
+    <div class="col-md-8">
+      <table class="detail_table">
+      <tbody>
+        <tr>
+          <th class="detail_user">名前</th>
+          <td class="detail_value"><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th class="detail_user">出身スクール</th>
+          <td class="detail_value"><%= @user.school.name %></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+
 <div class="container app_contents">
-  <h2 class="apps_title title_border">アプリ一覧(<%= @apps.count %>)</h2>
+  <h2 class="apps_title title_border"><%= @user.name %>さんが開発したアプリ(<%= @apps.count %>)</h2>
   <ul class="app_lists">
     <% @apps.each do |app| %>
     <li class="list">
@@ -27,19 +50,6 @@
                       <span class="language">開発言語：</span><%= app.language %>
                       <span class="sen"></span>
                       <span class="period">開発期間：</span><%= app.period %> 日
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline_footer">
-                  <div class="user_container">
-                    <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
-                    <div class="user_info">
-                      <div class="user_name">
-                        <%= link_to app.user.name, user_path(app.user_id) %>
-                      </div>
-                      <div class="app_date">
-                        <%= l app.created_at %>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -5,15 +5,19 @@
     </h1>
     <ul class="header__bar__user_nav">
       <% if user_signed_in? %>
-        <li class="user_name">
-          <span><%= current_user.name %> さん</span>
-        </li>
-        <li class="header__bar__user_nav__btn">
-          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-        </li>
         <li class="header__bar__user_nav__btn">
           <%= link_to "投稿する", new_app_path %>
         </li>
+        <li class="dropdown user_name">
+            <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= current_user.name %> さん <b class="caret"></b>
+            </button>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'プロフィール', current_user %></li>
+              <li class="divider"></li>
+              <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
       <% else %>
         <li class="header__bar__user_nav__btn">
           <%= link_to "ログイン", new_user_session_path %>

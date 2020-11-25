@@ -19,7 +19,7 @@
       <tbody>
         <tr>
           <th class="detail-app">開発者</th>
-          <td class="detail-value"><%= @app.user.name %></td>
+          <td class="detail-value"><%= link_to @app.user.name, user_path(@app.user_id) %></td>
         </tr>
         <tr>
           <th class="detail-app">開発プログラミング言語</th>

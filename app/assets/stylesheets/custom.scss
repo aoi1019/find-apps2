@@ -8,3 +8,22 @@
   color:red;
   font-weight: bold;
 }
+
+
+.title_border {
+  display: flex;
+  align-items: center;
+}
+.title_border:before,
+.title_border:after {
+  border-top: 3px solid;
+  content: "";
+  flex-grow: 1;
+}
+.title_border:before {
+  margin-right: 1rem;
+}
+.title_border:after {
+  margin-left: 1rem;
+}
+  
