@@ -11,5 +11,6 @@ class User < ApplicationRecord
   validates :name, presence: true
 
   #ジャンルの選択が「--」の時は保存できないようにする
-  validates :school_id, numericality: { other_than: 1 }
+  validates :school_id, numericality: { other_than: 1 }, allow_nil: true
+  validates :profile, length: { maximum: 200 }
 end
