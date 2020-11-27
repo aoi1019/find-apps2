@@ -54,9 +54,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     resource.update_without_password(params)
   end
 
-  # def after_update_path_for(_resource)
-  #   user_path
-  # end
+  def after_update_path_for(_resource)
+    user_path(_resource)
+  end
 
 
   # The path used after sign up.
