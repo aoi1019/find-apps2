@@ -27,11 +27,19 @@
         </tr>
         <tr>
           <th class="detail-app">技術的なポイント</th>
-          <td class="detail-value"><%= @app.point %></td>
+          <% if @app.point.present? %>
+            <td class="detail-value"><%= @app.point %></td>
+          <% else %>
+            <td class="detail-value">　</td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail-app">開発期間</th>
-          <td class="detail-value"><%= @app.period %></td>
+          <% if @app.period.present? %>
+            <td class="detail-value"><%= @app.period %>日</td>
+          <% else %>
+            <td class="detail-value">？日</td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail-app">アプリのURL</th>

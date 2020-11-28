@@ -85,6 +85,23 @@
                     </div>
                   </div>
                 </div>
+                <div class="timeline_footer">
+                  <div class="user_container">
+                  <% if app.user.image.present? %>
+                    <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
+                  <% else %>
+                    <%= image_tag "/images/default.jpeg", class: 'user_icon' %>
+                  <% end %>
+                    <div class="user_info">
+                      <div class="user_name">
+                        <%= link_to app.user.name, user_path(app.user_id) %>
+                      </div>
+                      <div class="app_date">
+                        <%= l app.created_at %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
