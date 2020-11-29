@@ -3,7 +3,7 @@
   <ul class="app_lists">
     <% @apps.each do |app| %>
     <li class="list">
-      <%= link_to app_path(app) do %>
+      <%= link_to app_path(app.id) do %>
         <div class="app_content">
           <div class="card section">
             <div class="eyecatch_container app_img_content">
@@ -16,11 +16,17 @@
             <div class="main_container">
               <div class="timeline_header">
                 <h3 class="title">
-                  <%= link_to app.name, app_path(app) %>
+                  <%= link_to app.name, app_path(app), class: 'app-name' %>
                 </h3>
+                <% if app.description.present? %>
                 <p class="body">
                   <%= truncate(app.description)%>
                 </p>
+                <% else %>
+                <p class="body">
+                  　
+                </p>
+                <%end%>
                 <p class="body">
                 <span class="reference">アプリURL：</span>
                   <%= link_to "#{app.reference}", app.reference, target: :_blank %>
@@ -36,11 +42,11 @@
                 </div>
                 <div class="timeline_footer">
                   <div class="user_container">
-                  <% if app.user.image.present? %>
-                    <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
-                  <% else %>
-                    <%= image_tag "/images/default.jpeg", class: 'user_icon' %>
-                  <% end %>
+                    <% if app.user.image.present? %>
+                      <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
+                    <% else %>
+                      <%= image_tag "/images/default.jpeg", class: 'user_icon' %>
+                    <% end %>
                     <div class="user_info">
                       <div class="user_name">
                         <%= link_to app.user.name, user_path(app.user_id) %>
@@ -49,6 +55,13 @@
                         <%= l app.created_at %>
                       </div>
                     </div>
+                  </div>
+                  <div class="spacer"></div>
+                  <div class="comments-area">
+                    <i class="far fa-comment-alt comment-icon"></i><div class="comment-count"><%= app.comments.count %></div>
+                  </div>
+                  <div class="likes-area">
+                    <i class="far fa-heart like-icon"></i><div class="likes-count">0</div>
                   </div>
                 </div>
               </div>
