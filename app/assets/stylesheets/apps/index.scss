@@ -187,6 +187,7 @@
       font-size: 25px;
     }
     .likes-count {
+      display: inline;
       font-size: 18px;
       margin-left: 7px;
     }
@@ -195,4 +196,8 @@
 
 .likes-btn {
   color:black;
+}
+
+.likes-red-btn {
+  color: red;
 }
