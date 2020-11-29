@@ -3,11 +3,20 @@ class LikesController < ApplicationController
   before_action :authenticate_user!, only: [:create, :destroy]
 
   def create
-    like = Like.create(user_id: current_user.id, app_id: @app.id)
+    @user = @app.user
+    current_user.like(@app)
+    respond_to do |f|
+      f.html { redirect_back(fallback_location: app_path(@app)) }
+      f.js
+    end
   end
 
   def destroy
-    Like.find(user_id: current_user.id, app_id: @app.id).destroy
+    current_user.likes.find_by(app_id: @app.id).destroy
+    respond_to do |f|
+      f.html { redirect_back(fallback_location: app_path(@app)) }
+      f.js
+    end
   end
 
   private
