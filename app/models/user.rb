@@ -26,4 +26,12 @@ class User < ApplicationRecord
     clean_up_passwords
     result
   end
+
+  def like(app)
+    Like.create!(user_id: id, app_id: app.id)
+  end
+
+  def unlike(app)
+    Like.find_by(user_id: id, app_id: app.id).destroy
+  end
 end
