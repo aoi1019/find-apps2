@@ -101,6 +101,12 @@
                       </div>
                     </div>
                   </div>
+                  <div class="spacer"></div>
+                  <div class="comments-area">
+                    <i class="far fa-comment-alt comment-icon"></i><div class="comment-count"><%= app.comments.count %></div>
+                  </div>
+                  <% @app = app %>
+                  <%= render 'users/like_form' %>
                 </div>
               </div>
             </div>
