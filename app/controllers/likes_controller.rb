@@ -7,11 +7,11 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    like = Like.destroy(user_id: current_user.id, app_id: @app.id)
+    Like.find(user_id: current_user.id, app_id: @app.id).destroy
   end
 
   private
     def set_app
-      @app = App.find(params[:id])
+      @app = App.find(params[:app_id])
     end
 end
