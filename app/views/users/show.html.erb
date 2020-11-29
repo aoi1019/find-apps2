@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <th class="detail_user">Twitterアカウント</th>
-          <% if @user.school_id.present? %>
+          <% if @user.twitter.present? %>
             <td class="detail_value"><%= link_to @user.twitter, "#{@user.twitter}", target: :blank %></td>
           <% else %>
             <td class="detail_value">　</td>
