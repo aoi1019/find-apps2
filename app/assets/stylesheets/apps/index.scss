@@ -126,13 +126,6 @@
   margin-left: 10px;
 }
 
-// .user_icon {
-//   margin-top:15px;
-//   width: 7vh;
-//   height: 7vh;
-//   border-radius: 50px;
-// }
-
 .timeline_footer {
   display: flex;
   height: 50px;
@@ -165,6 +158,21 @@
       .app_date {
         font-size: 12px;
       } 
+    }
+  }
+  .spacer {
+    flex-grow: 1!important;
+  }
+  .comment-area {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 5px;
+    .comment-icon {
+      font-size: 25px;
+    }
+    .comment-count {
+      font-size: 18px;
+      margin-left: 7px;
     }
   }
 }
