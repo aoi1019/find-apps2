@@ -61,7 +61,15 @@
                     <i class="far fa-comment-alt comment-icon"></i><div class="comment-count"><%= app.comments.count %></div>
                   </div>
                   <div class="likes-area">
-                    <i class="far fa-heart like-icon"></i><div class="likes-count"><%= app.likes.count if app.likes.count > 0 %></div>
+                  <% if user_signed_in? %>
+                    <%= link_to app_likes_path(app), class: 'likes-btn', method: :post do %>
+                      <i class="far fa-heart like-icon"></i><div class="likes-count"><%= app.likes.count if app.likes.count > 0 %></div>
+                    <% end %>
+                  <% else %>
+                    <%= link_to app_likes_path(app), class: 'likes-btn', method: :post do %>
+                      <i class="far fa-heart like-icon"></i><div class="likes-count"><%= app.likes.count if app.likes.count > 0 %></div>
+                    <% end %>
+                  <% end %>
                   </div>
                 </div>
               </div>

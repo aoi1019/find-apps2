@@ -12,6 +12,6 @@ class LikesController < ApplicationController
 
   private
     def set_app
-      @app = App.find(paramd[:id])
+      @app = App.find(params[:id])
     end
 end
