@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <th class="detail_user">Twitterアカウント</th>
-          <% if @user.school_id.present? %>
+          <% if @user.twitter.present? %>
             <td class="detail_value"><%= link_to @user.twitter, "#{@user.twitter}", target: :blank %></td>
           <% else %>
             <td class="detail_value">　</td>
@@ -101,6 +101,12 @@
                       </div>
                     </div>
                   </div>
+                  <div class="spacer"></div>
+                  <div class="comments-area">
+                    <i class="far fa-comment-alt comment-icon"></i><div class="comment-count"><%= app.comments.count %></div>
+                  </div>
+                  <% @app = app %>
+                  <%= render 'users/like_form' %>
                 </div>
               </div>
             </div>

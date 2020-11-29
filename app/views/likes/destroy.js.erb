@@ -1,0 +1,2 @@
+$("#likes-<%= @app.id %>").html("<%= escape_javascript(render('users/like')) %>");
+$("#likes-count-<%= @app.id %>").html('<%= @app.likes.count %>');

@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_one_attached :image
   has_many :apps, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   validates :name, presence: true, allow_nil: true
   #ジャンルの選択が「--」の時は保存できないようにする
   validates :school_id, numericality: { other_than: 1 }, allow_nil: true
@@ -24,5 +25,13 @@ class User < ApplicationRecord
     result = update_attributes(params, *options)
     clean_up_passwords
     result
+  end
+
+  def like(app)
+    Like.create!(user_id: id, app_id: app.id)
+  end
+
+  def unlike(app)
+    Like.find_by(user_id: id, app_id: app.id).destroy
   end
 end

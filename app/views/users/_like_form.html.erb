@@ -1,0 +1,7 @@
+<div id="likes-<%= @app.id %>" class="likes-area">
+  <% if user_signed_in? && @app.already_liked?(current_user) %>
+    <%= render 'users/unlike' %>
+  <% else %>
+    <%= render 'users/like' %>
+  <% end %>
+</div>
