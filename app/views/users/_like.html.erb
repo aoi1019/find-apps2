@@ -1,0 +1,3 @@
+<%= link_to "/likes/#{@app.id}/create", method: :post, class: 'likes-btn', remote: true do %>
+  <i class="far fa-heart like-icon"></i><div class="likes-count" id="likes-count-<%= @app.id %>"><%= @app.likes.count if @app.likes.count > 0 %></div>
+<% end %>

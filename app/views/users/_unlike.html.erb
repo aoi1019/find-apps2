@@ -1,0 +1,3 @@
+<%= link_to "/likes/#{@app.id}/destroy", method: :delete, class: 'likes-red-btn', remote: true do %>
+  <i class="fas fa-heart like-icon"></i><div class="likes-count" id="likes-count"><%= @app.likes.count if @app.likes.count > 0 %></div>
+<% end %>
