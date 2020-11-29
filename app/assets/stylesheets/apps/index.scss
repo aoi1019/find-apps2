@@ -182,7 +182,7 @@
   .likes-area {
     display: flex;
     align-items: flex-end;
-    margin: 0 0 5px 20px;
+    margin: 0 0 4px 20px;
     .like-icon {
       font-size: 25px;
     }
@@ -196,8 +196,14 @@
 
 .likes-btn {
   color:black;
+  &:hover{
+    color:red;
+  }
 }
 
 .likes-red-btn {
   color: red;
+  &:hover {
+    color:red;
+  }
 }
