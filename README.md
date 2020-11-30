@@ -1,24 +1,108 @@
-# README
+# 📌 Find Apps（ファインド アップス）
+個人規模のオリジナルアプリをシェアするサービスです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+※こちらは前回のサービスのリメイク版です。<br>
+【前回のGitHubリポジトリ】https://github.com/aoi1019/find-apps
 
-Things you may want to cover:
+独自ドメインで公開中です。（追加実装中）<br>
+https://find-apps.net/
+## 🌐 アプリのトップページ
+[![Image from Gyazo](https://i.gyazo.com/0df7360c4eca187a09e8138d30f6565e.jpg)](https://gyazo.com/0df7360c4eca187a09e8138d30f6565e)
 
-* Ruby version
+# 📕 アプリ概要
+### 自分で開発したオリジナルアプリを世界中にシェアする。<br>これを実現できるように設計されたサービスです。
+<br>
 
-* System dependencies
+# 📌 アプリ機能
+## ✔︎ ゲストログイン機能
+トップページの「<font color="IndianRed">**ゲストログイン**</font>」をクリックするだけで簡単にログインできます。
+### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/117c6cf7ebf506981dae327b58ae2fec.gif)](https://gyazo.com/117c6cf7ebf506981dae327b58ae2fec)
 
-* Configuration
+## ✔︎ ユーザー編集機能
+新規登録時点で登録できなかった点を編集ページで編集することができます。
+- 名前 <font color="IndianRed">[必須]</font>
+- プロフィール画像
+- 自己紹介文
+- Twitterアカウント
+- 出身スクール選択（独学・その他もあり） <font color="IndianRed">[必須]</font>
+### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/fa57d5b8796080d293e42df12c38b7c0.gif)](https://gyazo.com/fa57d5b8796080d293e42df12c38b7c0)
 
-* Database creation
+## ✔︎ アプリ投稿 / 編集機能
+- アプリの名称 <font color="IndianRed">[必須]</font>
+- アプリの画像 <font color="IndianRed">[必須]</font>
+- アプリの説明
+- 開発ポイント
+- 開発言語 <font color="IndianRed">[必須]</font>
+- アプリのURL <font color="IndianRed">[必須]</font>
+- 開発期間[日]
 
-* Database initialization
+[![Image from Gyazo](https://i.gyazo.com/a990e548c2c28c22a86e919aa53f9698.png)](https://gyazo.com/a990e548c2c28c22a86e919aa53f9698)
 
-* How to run the test suite
+## ✔ コメント / コメント削除機能
+- コメントできる
+- 自分で送信したコメントを削除できる
+- 投稿にコメントが何個あるか確認できる
+### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/dab36da8676662d6ef8ec213c9a46e7c.gif)](https://gyazo.com/dab36da8676662d6ef8ec213c9a46e7c)
 
-* Services (job queues, cache servers, search engines, etc.)
+## ✔︎ いいね / いいね解除機能
+- **1人のユーザーは1つの投稿に1回いいねができる**
+- いいねすると赤色に変化
+- いいね解除すると元の色に戻る
+- Ajaxによる開発
+### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b.gif)](https://gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b)
 
-* Deployment instructions
+# 📚 目指した課題解決
+私は、アプリを開発する際に「私と同じ駆け出しエンジニアは、どんなアプリを開発しているのだろうか。」と疑問に思い、Googleで検索するもあまりヒットはしませんでした。
 
-* ...
+それなら、私が**オリジナルアプリのまとめサイトを作ってしまおう**と思い開発しました。
+
+## ✔︎ 具体的に知りたい情報は以下です。
+- どのプログラミング言語？
+- 本番環境の状態は？（URL見たい！）
+- 開発期間はどれくらい？
+- どのスクールに通っている？もしくは独学？
+- 開発したポイントはあるのだろうか？
+
+上記の通りです。<br>
+**この疑問を解決するサービスを開発しました。**
+
+## ✔︎ ペルソナは3人います
+- **これからプログラミングの勉強をする方**
+  - 「このスクールではこのレベルのアプリが開発できるのか」と入る前にザックリ理解できるため。
+  - 「独学でもこのレベルまで開発できるのか」とモチベーションが上がるため。
+- **いざ開発しようと思った時に何を作ろうか迷っている方**
+  - Find Appsに投稿されているアプリを見て「このアイディアいいな！」など思えるため。
+  - スクールの先輩のオリジナルアプリが見れるため。
+  - 他の人のアプリのレベル感がわかるため。
+- **企業の採用担当者様**
+  - 新しい人材を確保したいが経験値のあるエンジニアの確保は難しい。そこで「未経験のエンジニアでも技術力があって面白いアイディアがあるなら採用したい」と考えるため。
+  - DM機能を追加してそれぞれがメッセージでやりとりができるようになれば最高なため。
+
+
+# 💻 使用技術
+- HTML / CSS
+- Bootstrap / Sass
+- Javascript
+- Ruby 2.6.5
+- Ruby on Rails 6.0.3.4
+- MySQL 5.6
+- RSpec
+
+## 🖥 インフラ・本番環境
+- AWS (S3, EC2, Route53)
+- Nginx
+- Unicorn
+- MariaDB
+- Capistrano 3.14.1 (自動デプロイ) 
+
+## ソースコード管理
+- Git / GitHub
+
+# 📌 実装予定の機能
+- 検索機能：アプリ名・開発言語で検索できる機能を実装します。
+- 通知機能：いいねやコメントされた時に相手方に通知が行く機能を実装します。
+- DM機能：それぞれが個人のチャットで会話ができる実装をします。
