@@ -168,3 +168,10 @@
   font-size: 16px;
   resize: none;
 }
+
+.comment-destroy-btn {
+  color: gray;
+  &:hover {
+    color: red!important;
+  }
+}

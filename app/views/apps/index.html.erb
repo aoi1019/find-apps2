@@ -45,7 +45,7 @@
                       <% if app.user.image.present? %>
                         <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
                       <% else %>
-                        <%= image_tag "/images/default.jpeg", class: 'user_icon' %>
+                        <%= link_to image_tag("/images/default.jpeg", class: 'user_icon'), user_path(app.user_id) %>
                       <% end %>
                       <div class="user_info">
                         <div class="user_name">

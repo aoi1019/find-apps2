@@ -10,6 +10,6 @@ class App < ApplicationRecord
   validates :image, presence: true
 
   def already_liked?(user)
-    self.likes.exists?(user_id: user.id)
+    likes.exists?(user_id: user.id)
   end
 end

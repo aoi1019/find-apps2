@@ -15,7 +15,6 @@ RSpec.describe App, type: :model do
       it '画像がない場合投稿できないことを確認' do
         @app.image = nil
         @app.valid?
-        binding.pry
         expect(@app.errors.full_messages).to include('')
       end
     end

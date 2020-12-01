@@ -44,14 +44,15 @@
     </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-6 col-offset-6 text-center user-edit-btn">
-      <%= link_to 'ユーザ情報を編集する', edit_user_registration_path, class: "btn btn-success btn-lg" %>
+<% if current_user.id == @user.id %>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-offset-6 text-center user-edit-btn">
+        <%= link_to 'ユーザ情報を編集する', edit_user_registration_path, class: "btn btn-success btn-lg" %>
+      </div>
     </div>
   </div>
-</div>
+<% end %>
 
 <div class="container app_contents">
   <h2 class="apps_title title_border"><%= @user.name %>さんが開発したアプリ(<%= @apps.count %>)</h2>
