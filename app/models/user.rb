@@ -42,4 +42,16 @@ class User < ApplicationRecord
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
   end
+
+  def favorite(app)
+    Favorite.create!(user_id: id, app_id: app.id)
+  end
+
+  def unfavorite(app)
+    Favorite.find_by(user_id: id, app_id: app.id).destroy
+  end
+
+  def favorite?(app)
+    !Favorite.find_by(user_id: id, app_id: app.id).nil?
+  end
 end
