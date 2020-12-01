@@ -12,7 +12,6 @@
         <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当にこの投稿を削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
       </div>
     <% end %>
-    <%= render '/favorites/favorite_form' %>
     <div class="app-description-box">
       <span><%= @app.description %></span>
     </div>
@@ -49,6 +48,7 @@
       </tbody>
     </table>
   </div>
+  <%= render '/favorites/favorite_form' %>
   <div class="layout column comment_container">
     <div class="layout column reviews">
       <section>
