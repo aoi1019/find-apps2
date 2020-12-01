@@ -10,14 +10,14 @@ RSpec.describe "Favorites", type: :request do
     context 'ログインしてない場合' do
       it 'お気に入り登録はできず、ログインページへリダイレクトすることを確認' do
         expect {
-          post "/apps/:app_id/favorites"
+          post "/favorites/#{@app.id}/create"
         }.not_to change{Favorite.count}
         expect(response).to redirect_to new_user_session_path
       end
 
       it 'お気に入り解除はできず、ログインページへリダイレクトすることを確認' do
         expect {
-          delete "/apps/:app_id/favorites/:id"
+          delete "/favorites/#{@app.id}/destroy"
         }.not_to change{Favorite.count}
         expect(response).to redirect_to new_user_session_path
       end
