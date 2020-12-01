@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   end
   post "likes/:app_id/create" => "likes#create"
   delete "likes/:app_id/destroy" => "likes#destroy"
+  get :favorites, to: 'favorites#index'
+  post   "favorites/:app_id/create"  => "favorites#create"
+  delete "favorites/:app_id/destroy" => "favorites#destroy"
   resources :users, only: :show
 end

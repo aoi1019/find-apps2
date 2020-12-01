@@ -3,6 +3,7 @@ class App < ApplicationRecord
   has_one_attached :image
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :name, presence: true
   validates :language, presence: true

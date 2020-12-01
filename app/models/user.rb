@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :apps, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   validates :name, presence: true, allow_nil: true
   # ジャンルの選択が「--」の時は保存できないようにする
   validates :school_id, numericality: { other_than: 1 }, allow_nil: true
@@ -40,5 +41,17 @@ class User < ApplicationRecord
       user.password = SecureRandom.urlsafe_base64
       # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
     end
+  end
+
+  def favorite(app)
+    Favorite.create!(user_id: id, app_id: app.id)
+  end
+
+  def unfavorite(app)
+    Favorite.find_by(user_id: id, app_id: app.id).destroy
+  end
+
+  def favorite?(app)
+    !Favorite.find_by(user_id: id, app_id: app.id).nil?
   end
 end
