@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   validates :name, presence: true, allow_nil: true
-  #ジャンルの選択が「--」の時は保存できないようにする
+  # ジャンルの選択が「--」の時は保存できないようにする
   validates :school_id, numericality: { other_than: 1 }, allow_nil: true
   validates :profile, length: { maximum: 200 }
 
