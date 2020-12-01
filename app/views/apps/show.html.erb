@@ -7,11 +7,12 @@
       <%= image_tag @app.image ,class:"app-box-img" %>
     <div>
     <% if user_signed_in? && current_user.id == @app.user_id %>
-    <div class="user-button">
-       <%= link_to "アプリの編集", edit_app_path(@app.id), class: 'btn btn-success edit-btn' %>
-       <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当にこの投稿を削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
-    </div>
+      <div class="user-button">
+        <%= link_to "アプリの編集", edit_app_path(@app.id), class: 'btn btn-success edit-btn' %>
+        <%= link_to "アプリを削除", app_path, method: :delete, class: 'btn btn-danger delete-btn', data: { confirm: '本当にこの投稿を削除して良いですか？',  cancel: 'やめる', commit: '削除する' }, title: "削除確認" %>
+      </div>
     <% end %>
+    <%= render '/favorites/favorite_form' %>
     <div class="app-description-box">
       <span><%= @app.description %></span>
     </div>
