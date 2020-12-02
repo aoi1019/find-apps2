@@ -9,6 +9,10 @@ class LikesController < ApplicationController
       f.html { redirect_back(fallback_location: app_path(@app)) }
       f.js
     end
+    if @user != current_user
+      @user.notifications.create(app_id: @app.id, from_user_id: current_user.id, variety: 1)
+      @user.update_attribute(:notification, true)
+    end
   end
 
   def destroy

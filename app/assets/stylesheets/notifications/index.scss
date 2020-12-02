@@ -1,0 +1,64 @@
+.notification-img {
+  // height: 20vh;
+  // max-width: 100%;
+}
+
+.notifications-field {
+  margin-top: 100px;
+  .notification-title {
+    color: black;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  .notification-area {
+    margin-left: 0px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0 20px;
+    margin-bottom: 10px;
+  }
+  .notification-comment {
+    color: #85837a;
+    margin-bottom: 20px;
+  }
+  .app-img-icon img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+.area-top {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  .user-content {
+    // margin-left: -225px;
+    .notification-message {
+      width: 100vw;
+      padding: 2px 0 0 10px;
+    }
+  }
+}
+
+.user-icon {
+  height: 25%;
+  width: 25%;
+  margin-bottom: 20px;
+  display: inline;
+  .user_icon {
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #dfdfdf;
+    border-radius: 22px;
+    position: relative;
+  }
+  .user-name {
+    display: inline;
+  }
+}
+.user-content {
+  display: inline;
+}

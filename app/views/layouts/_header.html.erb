@@ -8,6 +8,11 @@
         <li class="header__bar__user_nav__btn">
           <%= link_to new_app_path do %><span><i class="fas fa-edit"></i> 新しい投稿</span><% end %>
         </li>
+        <% if current_user.notification == true %>
+          <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color new-notification"><i class="fas fa-circle n-circle"></i><i class="fas fa-bell"></i></span><% end %></li>
+        <% else %>
+          <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color no-notification"><i class="fas fa-bell"></i></span><% end %></li>
+        <% end %>
         <li class="dropdown user_name">
             <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i> <%= current_user.name %> <b class="caret"></b>
