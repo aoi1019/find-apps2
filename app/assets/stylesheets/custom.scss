@@ -16,7 +16,7 @@
 }
 .title_border:before,
 .title_border:after {
-  border-top: 3px solid;
+  border-top: 1px solid #ddd;
   content: "";
   flex-grow: 1;
 }
