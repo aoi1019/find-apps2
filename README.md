@@ -16,8 +16,8 @@ https://find-apps.net/
 # 📌 アプリ機能
 ## ✔︎ ゲストログイン機能
 トップページの「<font color="IndianRed">**ゲストログイン**</font>」をクリックするだけで簡単にログインできます。
-### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/117c6cf7ebf506981dae327b58ae2fec.gif)](https://gyazo.com/117c6cf7ebf506981dae327b58ae2fec)
+<!-- ### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/117c6cf7ebf506981dae327b58ae2fec.gif)](https://gyazo.com/117c6cf7ebf506981dae327b58ae2fec) -->
 
 ## ✔︎ ユーザー編集機能
 新規登録時点で登録できなかった点を編集ページで編集することができます。
@@ -26,8 +26,8 @@ https://find-apps.net/
 - 自己紹介文
 - Twitterアカウント
 - 出身スクール選択（独学・その他もあり） <font color="IndianRed">[必須]</font>
-### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/fa57d5b8796080d293e42df12c38b7c0.gif)](https://gyazo.com/fa57d5b8796080d293e42df12c38b7c0)
+<!-- ### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/fa57d5b8796080d293e42df12c38b7c0.gif)](https://gyazo.com/fa57d5b8796080d293e42df12c38b7c0) -->
 
 ## ✔︎ アプリ投稿 / 編集機能
 - アプリの名称 <font color="IndianRed">[必須]</font>
@@ -38,22 +38,34 @@ https://find-apps.net/
 - アプリのURL <font color="IndianRed">[必須]</font>
 - 開発期間[日]
 
-[![Image from Gyazo](https://i.gyazo.com/a990e548c2c28c22a86e919aa53f9698.png)](https://gyazo.com/a990e548c2c28c22a86e919aa53f9698)
+<!-- [![Image from Gyazo](https://i.gyazo.com/a990e548c2c28c22a86e919aa53f9698.png)](https://gyazo.com/a990e548c2c28c22a86e919aa53f9698) -->
 
 ## ✔ コメント / コメント削除機能
 - コメントできる
 - 自分で送信したコメントを削除できる
 - 投稿にコメントが何個あるか確認できる
-### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/dab36da8676662d6ef8ec213c9a46e7c.gif)](https://gyazo.com/dab36da8676662d6ef8ec213c9a46e7c)
+<!-- ### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/dab36da8676662d6ef8ec213c9a46e7c.gif)](https://gyazo.com/dab36da8676662d6ef8ec213c9a46e7c) -->
 
 ## ✔︎ いいね / いいね解除機能
 - **1人のユーザーは1つの投稿に1回いいねができる**
 - いいねすると赤色に変化
 - いいね解除すると元の色に戻る
 - Ajaxによる開発
-### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b.gif)](https://gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b)
+<!-- ### 🌐 **実際の挙動**
+[![Image from Gyazo](https://i.gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b.gif)](https://gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b) -->
+
+## ✔︎ お気に入り登録 / 解除機能
+- お気に入り一覧ページ
+- お気に入り登録をすると灰色に変化
+- お気に入り解除すると青色に戻る
+- Ajaxによる登録・解除
+
+## ✔︎ 通知機能
+- コメント・いいねされたら相手に通知がいく
+- 通知があると赤色に変化
+- 通知ページを開いたら色が元に戻る
+- 通知一覧ページ
 
 # 📚 目指した課題解決
 私は、アプリを開発する際に「私と同じ駆け出しエンジニアは、どんなアプリを開発しているのだろうか。」と疑問に思い、Googleで検索するもあまりヒットはしませんでした。
@@ -99,7 +111,7 @@ https://find-apps.net/
 - MariaDB
 - Capistrano 3.14.1 (自動デプロイ) 
 
-## ソースコード管理
+## 🖥 ソースコード管理
 - Git / GitHub
 
 # 📌 実装予定の機能
