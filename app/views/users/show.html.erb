@@ -31,6 +31,13 @@
             <td class="detail_value">　</td>
           <% end %>
         </tr>
+          <th class="detail_user">GitHubアカウント</th>
+          <% if @user.qiita.present? %>
+            <td class="detail_value"><%= link_to @user.qiita, "#{@user.qiita}", target: :blank %></td>
+          <% else %>
+            <td class="detail_value">　</td>
+          <% end %>
+        </tr>
         <tr>
           <th class="detail_user">出身スクール</th>
           <% if @user.school_id.present? %>
