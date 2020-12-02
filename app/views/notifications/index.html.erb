@@ -7,8 +7,8 @@
         <div class="notification-area" id="notification-<%= notification.id %>">
           <div class="area-top">
             <div class="user-icon">
-              <% if app.user.image.present? %>
-                <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
+              <% if user.image.present? %>
+                <%= link_to image_tag(user.image, class: "user_icon"), user_path(app.user_id) %>
               <% else %>
                 <%= link_to image_tag("/images/default.jpeg", class: 'user_icon'), user_path(app.user_id) %>
               <% end %>
