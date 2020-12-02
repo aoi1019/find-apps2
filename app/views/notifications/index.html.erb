@@ -1,2 +1,41 @@
-<h1>Notifications#index</h1>
-<p>Find me in app/views/notifications/index.html.erb</p>
+<div class="container notifications-field">
+  <h3 class="notification-title"><i class="fas fa-bell"></i> 通知一覧</h3>
+    <% if @notifications.present? %>
+      <% @notifications.each do |notification| %>
+      <% user = User.find(notification.from_user_id) %>
+      <% app = App.find(notification.app_id) %>
+        <div class="notification-area" id="notification-<%= notification.id %>">
+          <div class="area-top">
+            <div class="user-icon">
+              <% if app.user.image.present? %>
+                <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
+              <% else %>
+                <%= link_to image_tag("/images/default.jpeg", class: 'user_icon'), user_path(app.user_id) %>
+              <% end %>
+            </div>
+            <div class="user-content">
+              <% if notification.variety == 1 %>
+                <p class="notification-message"><%= link_to user.name, user_path(user) %>さんが<%= link_to "あなたの投稿", app_path(app) %>にいいね！しました。</p>
+              <% elsif notification.variety == 2 %>
+                <p class="notification-message"><%= link_to user.name, user_path(user) %>さんが<%= link_to "あなたの投稿", app_path(app) %>にコメントしました。<br>
+                「<span class="notification-comment"><%= notification.content %></span>」</p>
+              <% end %>
+            </div>
+          </div>
+          <div class="area-bottom">
+            <div class="row">
+              <div class="col-md-2">
+                <%= link_to image_tag(app.image), app_path(app), class: 'app-img-icon' %>
+              </div>
+              <div class="col-md-7">
+                <p><%= link_to app.name, app_path(app) %></p>
+                <p><%= app.description %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      まだ通知はありません。
+    <% end %>
+</div>
