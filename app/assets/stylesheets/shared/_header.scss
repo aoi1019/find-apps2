@@ -59,3 +59,30 @@ li {
 .header-btn {
   margin-left: 10px;
 }
+
+.new-notification {
+  color: black!important;
+}
+
+.no-notification {
+  color: black!important;
+}
+
+.notification-color {
+  color: white;
+}
+
+.notification-btn {
+  background-color: #f5f5f5;
+  margin: 0 7px;
+  border-radius: 100px;
+  // padding: 100px;
+}
+
+.n-circle {
+  position: absolute;
+  font-size: 0.5px;
+  padding-left: 0.8rem;
+  padding-top: 0rem;
+  color: red;
+}
