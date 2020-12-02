@@ -11,7 +11,7 @@
         <% if current_user.notification == true %>
           <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color new-notification"><i class="fas fa-circle n-circle"></i><i class="fas fa-bell"></i></span><% end %></li>
         <% else %>
-          <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color no-notification"><i class="fas fa-bell"></i></span><% end %></li>
+          <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color no-notification"><i class="far fa-bell"></i></span><% end %></li>
         <% end %>
         <li class="dropdown user_name">
             <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
