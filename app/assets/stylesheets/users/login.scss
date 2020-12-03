@@ -75,17 +75,6 @@
   border-radius: 5px;
   line-height: 40px;
   font-size: 14px;
-  &:before {
-    border-bottom: 1px solid;
-    width: 20px;
-    height: 20px;
-    background-image: image-url('google.jpg');
-    content: "";
-    // position: absolute;
-    top: 50%;
-    left: 16px;
-    transform: translateY(-50%);
-  }
 }
 
 // .google-icon {
