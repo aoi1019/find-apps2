@@ -56,4 +56,7 @@ class User < ApplicationRecord
   def favorite?(app)
     !Favorite.find_by(user_id: id, app_id: app.id).nil?
   end
+
+  def self.from_omniauth(auth)
+  end
 end
