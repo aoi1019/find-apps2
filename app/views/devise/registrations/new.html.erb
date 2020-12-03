@@ -45,7 +45,9 @@
       <%= f.password_field :password_confirmation, class:"input-default", id:"password-confirmation", placeholder:"同じパスワードを入力して下さい" %>
     </div>
   <% end %>
-
+    <div class="form-group">
+      <%= recaptcha_tags %>
+    </div>
   <div class='register-btn'>
     <%= f.submit "新規登録（無料）" ,class:"register-blue-btn" %>
   </div>
