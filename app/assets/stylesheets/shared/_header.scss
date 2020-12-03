@@ -9,6 +9,8 @@
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
   z-index: 5;
   background-color: rgb(19, 62, 141);
+  // background-color: #0268cc;
+  // background-color: #fff;
   // background-color:#337ab7;
   &__bar {
     display: flex;
@@ -24,6 +26,7 @@
       margin-top: 5px;
       & a {
         color: white;
+        // color: black;
         text-decoration: none;
       }
     }
@@ -85,4 +88,11 @@ li {
   padding-left: 0.8rem;
   padding-top: 0rem;
   color: red;
+}
+.btn-new-field {
+  // background-color: #F96204;
+  .new-app-btn {
+    color: white;
+  }
+
 }
