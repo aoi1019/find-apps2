@@ -80,7 +80,7 @@ https://find-apps.net/
 
 ## ✔︎ reCAPTCHAを使って新規登録
 - 新規登録時にチェックを入れないと登録ができません。
-[![Image from Gyazo](https://i.gyazo.com/fcca96a5e0392e5781df197241b094c9.gif)](https://gyazo.com/fcca96a5e0392e5781df197241b094c9)
+[![Image from Gyazo](https://i.gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b.gif)](https://gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b)
 
 # 📚 目指した課題解決
 私は、アプリを開発する際に「私と同じ駆け出しエンジニアは、どんなアプリを開発しているのだろうか。」と疑問に思い、Googleで検索するもあまりヒットはしませんでした。
