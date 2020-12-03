@@ -83,3 +83,4 @@ gem 'dotenv-rails'
 # gem "omniauth-rails_csrf_protection"
 gem "pry-rails"
 gem 'recaptcha',  require: "recaptcha/rails"
+gem 'kaminari'

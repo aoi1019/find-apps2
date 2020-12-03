@@ -1,5 +1,5 @@
 <div class="container app_contents">
-  <h2 class="apps_title title_border"><i class="fas fa-list-alt"></i> アプリ一覧(<%= @apps.count %>)</h2>
+  <h2 class="apps_title title_border"><i class="fas fa-list-alt"></i> アプリ一覧</h2>
   <ul class="app_lists">
     <% @apps.each do |app| %>
       <li class="list">
@@ -71,4 +71,5 @@
       </li>
     <% end %>
   </ul>
+  <%= paginate @apps %>
 </div>
