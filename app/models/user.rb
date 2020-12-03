@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,:omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :school
   has_one_attached :image
@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :sns_credentials
   validates :name, presence: true, allow_nil: true
   # ジャンルの選択が「--」の時は保存できないようにする
   validates :school_id, numericality: { other_than: 1 }, allow_nil: true
@@ -54,5 +55,18 @@ class User < ApplicationRecord
 
   def favorite?(app)
     !Favorite.find_by(user_id: id, app_id: app.id).nil?
+  end
+
+  def self.from_omniauth(auth)
+    sns = SnsCredential.where(provider: auth.provider, uid: auth.uid).first_or_create
+    user = User.where(email: auth.info.email).first_or_initialize(
+      name: auth.info.name,
+        email: auth.info.email
+    )
+    if user.persisted?
+      sns.user = user
+      sns.save
+    end
+    { user: user, sns: sns }
   end
 end
