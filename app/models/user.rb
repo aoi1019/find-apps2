@@ -11,6 +11,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :notifications, dependent: :destroy
+  has_many :sns_credentials
   validates :name, presence: true, allow_nil: true
   # ジャンルの選択が「--」の時は保存できないようにする
   validates :school_id, numericality: { other_than: 1 }, allow_nil: true
