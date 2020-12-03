@@ -30,10 +30,10 @@
     または
   </span>
   <div class="sns-btn">
-    <%= link_to root_path, class: 'google-btn btn' do %>
+    <%= link_to user_facebook_omniauth_authorize_path, method: :post, class: 'google-btn btn' do %>
       <span><i class="fab fa-google google-icon"></i> Googleでログイン</span>
     <% end %>
-    <%= link_to root_path, class: 'facebook-btn btn' do %>
+    <%= link_to user_google_oauth2_omniauth_authorize_path, method: :post, class: 'facebook-btn btn' do %>
       <span><i class="fab fa-facebook-square"></i> Facebookでログイン</span>
     <% end %>
 </div>
