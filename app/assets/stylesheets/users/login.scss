@@ -1,4 +1,4 @@
-.login-btn {
+.login-btn, .sns-btn {
   width: 50%;
   margin: 0 auto;
   margin-top: 50px;
@@ -6,8 +6,9 @@
 
 .login-blue-btn {
   width: 100%;
-  background: #337ab7;
-  border: 1px solid #2e6da4;
+  background: #0268cc;
+  border: 1px solid transparent;
+  border-radius: 5px;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
@@ -37,4 +38,68 @@
   color: #fff;
   font-size: 12px;
   font-weight: bold;
+}
+
+.or-line {
+  display: block;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.or-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.or-border:before,
+.or-border:after {
+  border-top: 1px solid #ddd;
+  content: "";
+  flex-grow: 1;
+}
+.or-border:before {
+  margin-right: 1rem;
+}
+.or-border:after {
+  margin-left: 1rem;
+}
+
+.google-btn {
+  font-weight: bold;
+  width: 100%;
+  background-color: white;
+  color: #999;
+  border: 2px solid #999;
+  border-radius: 5px;
+  line-height: 40px;
+  font-size: 14px;
+  &:before {
+    border-bottom: 1px solid;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('google.jpg');
+    content: "";
+    // position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+  }
+}
+
+// .google-icon {
+//   color: red;
+// }
+
+.facebook-btn {
+  font-weight: bold;
+  margin-top: 20px;
+  width: 100%;
+  background-color: white;
+  color: #3c5a99;
+  border: 2px solid #3c5a99;
+  border-radius: 5px;
+  line-height: 40px;
+  font-size: 14px;
 }
