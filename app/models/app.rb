@@ -6,9 +6,11 @@ class App < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :notifications, dependent: :destroy
 
-  validates :name, presence: true
-  validates :language, presence: true
-  validates :reference, presence: true
+  validates :name, presence: true, length: { maximum: 50 }
+  validates :description, length: { maximum: 300 }
+  validates :point, length: { maximum: 140 }
+  validates :language, presence: true, length: { maximum: 50 }
+  validates :reference, presence: true, length: { maximum: 100 }
   validates :image, presence: true
 
   def already_liked?(user)
