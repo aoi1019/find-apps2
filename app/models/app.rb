@@ -13,4 +13,12 @@ class App < ApplicationRecord
   def already_liked?(user)
     likes.exists?(user_id: user.id)
   end
+
+  def self.search(keyword)
+    if keyword
+      where(['name LIKE ? OR language LIKE ?', "%#{keyword}%", "%#{keyword}%"])
+    else
+      all
+    end
+  end
 end
