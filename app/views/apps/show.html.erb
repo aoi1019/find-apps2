@@ -17,7 +17,6 @@
       </div>
     <% end %>
     <div class="app-description-box">
-      <span><%= @app.description %></span>
     </div>
     <table class="detail-table">
       <tbody>
@@ -28,6 +27,14 @@
         <tr>
           <th class="detail-app">開発プログラミング言語</th>
           <td class="detail-value"><%= @app.language %></td>
+        </tr>
+        <tr>
+          <th class="detail-app">アプリの説明</th>
+          <% if @app.description.present? %>
+            <td class="detail-value"><%= @app.description %></td>
+          <% else %>
+            <td class="detail-value">　</td>
+          <% end %>
         </tr>
         <tr>
           <th class="detail-app">技術的なポイント</th>
