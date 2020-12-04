@@ -1,6 +1,6 @@
 class School < ActiveHash::Base
   self.data = [
-    { id: 1, name: '---' },
+    { id: 1, name: '--- 選択してください ---' },
     { id: 2, name: 'テックキャンプ' },
     { id: 3, name: 'Tech Academy' },
     { id: 4, name: 'Code Camp' },
