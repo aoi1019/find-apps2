@@ -4,6 +4,7 @@ class App < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :favorites, dependent: :destroy
+  has_many :notifications, dependent: :destroy
 
   validates :name, presence: true
   validates :language, presence: true
