@@ -80,7 +80,15 @@ https://find-apps.net/
 
 ## ✔︎ reCAPTCHAを使って新規登録
 - 新規登録時にチェックを入れないと登録ができません。
+
 [![Image from Gyazo](https://i.gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b.gif)](https://gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b)
+
+## ✔︎ 検索機能
+- アプリ名
+- 開発プログラミング言語
+
+上記の2つを検索することができます。
+※gemは活用していません。
 
 # 📚 目指した課題解決
 私は、アプリを開発する際に「私と同じ駆け出しエンジニアは、どんなアプリを開発しているのだろうか。」と疑問に思い、Googleで検索するもあまりヒットはしませんでした。
@@ -120,14 +128,15 @@ https://find-apps.net/
 - RSpec
 
 ## 🖥 インフラ・本番環境
-- AWS (S3, EC2, Route53)
+- AWS (S3, EC2, Route53, Elastic Load Balancer)
 - Nginx
 - Unicorn
 - MariaDB
 - Capistrano 3.14.1 (自動デプロイ) 
 
 ## 🖥 ソースコード管理
-- Git / GitHub
+- Git
+- GitHub
 
 # 📌 実装予定の機能
 - 検索機能：アプリ名・開発言語で検索できる機能を実装します。
@@ -135,4 +144,15 @@ https://find-apps.net/
 - DM機能：それぞれが個人のチャットで会話ができる実装をします。
 
 # 📚 テーブル設計
+
+
 [![Image from Gyazo](https://i.gyazo.com/05a15461a0d2b64a424e9b3a8bf64018.png)](https://gyazo.com/05a15461a0d2b64a424e9b3a8bf64018)
+
+
+
+# 📌 SNS
+- Twitter ： https://twitter.com/aoi_programming
+- Qiita : https://qiita.com/aoi1019m
+- BLOG : https://tech.aoiblog.net
+- Affiliate Site : https://aoiblog.net
+- GitHub : https://github.com/aoi1019/
