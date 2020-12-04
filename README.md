@@ -144,7 +144,10 @@ https://find-apps.net/
 - DM機能：それぞれが個人のチャットで会話ができる実装をします。
 
 # 📚 テーブル設計
+
+
 [![Image from Gyazo](https://i.gyazo.com/05a15461a0d2b64a424e9b3a8bf64018.png)](https://gyazo.com/05a15461a0d2b64a424e9b3a8bf64018)
+
 
 
 # 📌 SNS
