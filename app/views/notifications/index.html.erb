@@ -25,7 +25,11 @@
           <div class="area-bottom">
             <div class="row">
               <div class="col-md-2">
-                <%= link_to image_tag(app.image), app_path(app), class: 'app-img-icon' %>
+                <% if app.image.present? %>
+                  <%= link_to image_tag(app.image), app_path(app), class: 'app-img-icon' %>
+                <% else %>
+                  <%= link_to image_tag("/images/default.png"), app_path(app), class: 'app-img-icon' %>
+                <% end %>
               </div>
               <div class="col-md-7">
                 <p><%= link_to app.name, app_path(app) %></p>

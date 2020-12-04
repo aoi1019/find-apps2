@@ -4,7 +4,11 @@
       <%= @app.name %>
     </h2>
     <div class="app-img-content">
-      <%= image_tag @app.image ,class:"app-box-img" %>
+      <% if @app.image.present? %>
+        <%= image_tag @app.image ,class:"app-box-img" %>
+      <% else %>
+        <%= image_tag "/images/default.png", class: 'app-box-img' %>
+      <% end %>
     <div>
     <% if user_signed_in? && current_user.id == @app.user_id %>
       <div class="user-button">
