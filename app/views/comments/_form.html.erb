@@ -1,0 +1,17 @@
+<% if user_signed_in? %>
+    <div class="layout post_review_container">
+      <div class="container column post_review_inner_container">
+        <div class="layout column container_M">
+          <%= form_with(model: [@app, @comment], local: true) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+            <div class="layout column">
+                <%= f.text_area :content, placeholder: 'コメント内容を記入してください', rows: '6', class:'comment-text' %>
+            </div>
+              <%= f.submit 'コメントする', class: 'btn btn-primary comment-btn' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <p class="text-center comment-login-alert">※ コメントするにはログインする必要があります。</p>
+  <% end %>
