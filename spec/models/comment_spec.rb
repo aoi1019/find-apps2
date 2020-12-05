@@ -24,10 +24,10 @@ RSpec.describe Comment, type: :model do
       expect(@comment).not_to be_valid
     end
 
-    it 'contentが50文字以内である事を確認' do
-      @comment.content = 'a' * 51
+    it 'contentが140文字以内である事を確認' do
+      @comment.content = 'a' * 141
       @comment.valid?
-      expect(@comment.errors.full_messages).to include('コメントは50文字以内で入力してください')
+      expect(@comment.errors.full_messages).to include('コメントは140文字以内で入力してください')
     end
   end
 end
