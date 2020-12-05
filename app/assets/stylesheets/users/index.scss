@@ -1,0 +1,31 @@
+.users-contents {
+  margin-top: 100px;
+  .user-lists {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .user-list {
+      margin: 30px;
+      .user-icon-area {
+        .user-icon {
+          width: 160px;
+          height: 160px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #dfdfdf;
+          border-radius: 100px;
+          position: relative;
+        }
+      }
+      .user-name-area {
+        text-align: center;
+        .user-name {
+          text-decoration: none;
+          color: #555;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
