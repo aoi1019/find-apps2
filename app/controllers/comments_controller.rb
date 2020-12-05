@@ -4,11 +4,12 @@ class CommentsController < ApplicationController
   def create
     @app = App.find(params[:app_id])
     @user = @app.user
-    if comment = Comment.create(comment_params)
+    @comment = @app.comments.new(comment_params)
+    if @comment.save
       flash[:notice] = 'コメントしました'
-      redirect_to "/apps/#{comment.app.id}"
+      redirect_to "/apps/#{@comment.app.id}"
       if @user != current_user
-        @user.notifications.create(from_user_id: current_user.id, variety: 2, content: comment.content, app_id: @app.id )
+        @user.notifications.create(from_user_id: current_user.id, variety: 2, content: @comment.content, app_id: @app.id)
         @user.update_attribute(:notification, true)
       end
     else
