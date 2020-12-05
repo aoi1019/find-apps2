@@ -78,11 +78,4 @@ class User < ApplicationRecord
     end
   end
 
-  # def self.search(school)
-  #   if school
-  #     where(['id', "%#{school}%"])
-  #   else
-  #     all
-  #   end
-  # end
 end
