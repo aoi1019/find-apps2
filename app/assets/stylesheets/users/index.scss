@@ -1,5 +1,21 @@
 .users-contents {
   margin-top: 100px;
+  .users-title {
+    color: #555;
+    text-decoration: none;
+  }
+  .search-area {
+    .user-search-field {
+      height: 50px;
+      width: 30vw;
+      padding-left: 1vw;
+      margin-right: 10px;
+    }
+    .search-select {
+      height: 50px;
+      margin: 10px;
+    }
+  }
   .user-lists {
     display: flex;
     flex-direction: row;
@@ -28,4 +44,8 @@
       }
     }
   }
+}
+
+.back-link {
+  text-align: center;
 }

@@ -1,6 +1,21 @@
 <div class="container users-contents">
-  <h3 class="title_border"><i class="fas fa-list-alt"></i> すべてのユーザー</h3>
+  <h3 class="title_border"><i class="fas fa-list-alt"></i><%= link_to "すべてのユーザー", users_path, class: 'users-title' %></h3>
   <div class="row">
+
+      <%= form_with(url: users_path, local: true, method: :get, class: 'search-area') do |f| %>
+        <%= f.text_field :keyword, placeholder: 'ユーザー名で検索', class: 'user-search-field' %>
+        <%#= f.collection_select :school_id, School.all, :id, :name %>
+        <%#= f.collection_select :school, @school, :name, :name ,{class:"search-select", id:"school-id"}, include_blank: 'スクール名で検索' %>
+        <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
+      <% end %>
+
+      <% if @search_word.present? %>
+        <h3 class="title_border">「<%= @search_word %>」の検索結果(<%= @users.count%>)</h3>
+        <div class="back-link">
+          <%= link_to "前のページに戻る", users_path if @users.count == 0 %>
+        </div>
+      <% end %>
+
     <ul class="user-lists">
     <%= render @users %>
     </ul>
