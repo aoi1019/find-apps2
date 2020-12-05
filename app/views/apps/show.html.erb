@@ -64,54 +64,30 @@
   <div class="layout column comment_container">
     <div class="layout column reviews">
       <section>
-      <h3 class="comment_area_title">
-        コメント一覧
-      </h3>
-      <%#= render 'layouts/error_messages', model: f.object %>
+        <h3 class="comment_area_title">
+          コメント一覧
+        </h3>
         <% if @comments %>
-          <% @comments.each do |comment| %>
-            <div class="layout column container_bLYok">
-              <div class="layout align-center first_row">
-                <div class="comment_user_name">
-                  <%= comment.user.name %>
-                </div>
-                <% if user_signed_in? && current_user.id == comment.user_id %>
-                <div class="comment-destroy">
-                  <%= link_to app_comment_path(comment), method: :delete, class: 'btn btn-dark btn-xs comment-destroy-btn', data: { confirm: "本当にコメントを削除して良いですか？" } do %><i class="fas fa-trash-alt"></i><% end %>
-                </div>
-                <% end %>
-                <div class="comment_created_at">
-                  <%= l comment.created_at %>
-                </div>
-              </div>
-              <div class="layout align-center third_row">
-                <div class="comment_user_text">
-                  <%= comment.content %>
-                </div>
-              </div>
-            </div>
-          <% end %>
+          <%= render @comments %>
         <% end %>
       </section>
     </div>
   </div>
+
   <% if user_signed_in? %>
-  <div class="layout post_review_container">
-    <div class="container column post_review_inner_container">
-      <div class="layout column container_M">
-        <%= form_with(model: [@app, @comment], local: true) do |f| %>
-          <div class="layout column review_body_container">
-            <%#div class="comment_title">
-            ここにコメントを記入してください
-            </div>%>
-              <%= f.text_area :content, placeholder: 'コメント内容を記入してください', rows: '6', class:'comment-text' %>
-          </div>
-          <div class="layout align-center justify-center">
-            <%= f.submit 'コメントする', class: 'btn btn-primary comment-btn' %>
-          </div>
-        <% end %>
+    <div class="layout post_review_container">
+      <div class="container column post_review_inner_container">
+        <div class="layout column container_M">
+          <%= form_with(model: [@app, @comment], local: true) do |f| %>
+            <div class="layout column">
+                <%= f.text_area :content, placeholder: 'コメント内容を記入してください', rows: '6', class:'comment-text' %>
+            </div>
+              <%= f.submit 'コメントする', class: 'btn btn-primary comment-btn' %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  <% else %>
+    <p class="text-center comment-login-alert">※ コメントするにはログインする必要があります。</p>
   <% end %>
 </div>
