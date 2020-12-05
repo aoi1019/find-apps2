@@ -51,6 +51,7 @@
     </div>
   </div>
 </div>
+
 <% if current_user.id == @user.id %>
   <div class="container">
     <div class="row">
@@ -64,68 +65,6 @@
 <div class="container app_contents">
   <h2 class="apps_title title_border"><%= @user.name %>さんが開発したアプリ(<%= @apps.count %>)</h2>
   <ul class="app_lists">
-    <% @apps.each do |app| %>
-    <li class="list">
-      <%= link_to app_path(app) do %>
-        <div class="app_content">
-          <div class="card section">
-            <div class="eyecatch_container app_img_content">
-              <% if app.image.present? %>
-                <%= link_to image_tag(app.image, class: 'eyecatch app_img' ), app_path(app.id), method: :get %>
-              <% else %>
-                <%= image_tag "/images/default.png", class: 'eyecatch app_img' %>
-              <% end %>
-            </div>
-            <div class="main_container">
-              <div class="timeline_header">
-                <h3 class="title">
-                  <%= link_to app.name, app_path(app) %>
-                </h3>
-                <p class="body">
-                  <%= truncate(app.description)%>
-                </p>
-                <p class="body">
-                <span class="reference">アプリURL：</span>
-                  <%= link_to "#{app.reference}", app.reference, target: :_blank %>
-                </p>
-                <div class="layout column meta_container">
-                  <div class0="layout meta_items">
-                    <div class="language_container">
-                      <span class="language">開発言語：</span><%= app.language %>
-                      <span class="sen"></span>
-                      <span class="period">開発期間：</span><%= app.period %> 日
-                    </div>
-                  </div>
-                </div>
-                <div class="timeline_footer">
-                  <div class="user_container">
-                  <% if app.user.image.present? %>
-                    <%= link_to image_tag(app.user.image, class: "user_icon"), user_path(app.user_id) %>
-                  <% else %>
-                    <%= image_tag "/images/default.jpeg", class: 'user_icon' %>
-                  <% end %>
-                    <div class="user_info">
-                      <div class="user_name">
-                        <%= link_to app.user.name, user_path(app.user_id) %>
-                      </div>
-                      <div class="app_date">
-                        <%= l app.created_at %>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="spacer"></div>
-                  <div class="comments-area">
-                    <i class="far fa-comment-alt comment-icon"></i><div class="comment-count"><%= app.comments.count %></div>
-                  </div>
-                  <% @app = app %>
-                  <%= render 'users/like_form' %>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-    </li>
-    <% end %>
+    <%= render @apps %>
   </ul>
 </div>
