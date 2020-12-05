@@ -69,4 +69,20 @@ class User < ApplicationRecord
     end
     { user: user, sns: sns }
   end
+
+  def self.search(keyword)
+    if keyword
+      where(['name LIKE ?', "%#{keyword}%"])
+    else
+      all
+    end
+  end
+
+  # def self.search(school)
+  #   if school
+  #     where(['id', "%#{school}%"])
+  #   else
+  #     all
+  #   end
+  # end
 end
