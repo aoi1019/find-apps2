@@ -21,6 +21,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('名前を入力してください')
       end
+      it 'nameが20文字以上だと登録できない' do
+        @user.name = 'a' * 21
+        @user.valid?
+        expect(@user.errors.full_messages).to include('名前は20文字以内で入力してください')
+      end
       it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
@@ -30,6 +35,11 @@ RSpec.describe User, type: :model do
         @user.password = nil
         @user.valid?
         expect(@user.errors.full_messages).to include('パスワードを入力してください')
+      end
+      it 'passwordが空では登録できない' do
+        @user.password_confirmation = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'school_idが1では登録できない' do
         @user.school_id = 1
