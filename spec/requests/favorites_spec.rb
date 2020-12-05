@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Favorites", type: :request do
+RSpec.describe 'Favorites', type: :request do
   before do
     @user = FactoryBot.create(:user)
     @app = FactoryBot.create(:app)
@@ -20,16 +20,16 @@ RSpec.describe "Favorites", type: :request do
 
     context 'ログインしてない場合' do
       it 'お気に入り登録はできず、ログインページへリダイレクトすることを確認' do
-        expect {
+        expect do
           post "/favorites/#{@app.id}/create"
-        }.not_to change{Favorite.count}
+        end.not_to change { Favorite.count }
         expect(response).to redirect_to new_user_session_path
       end
 
       it 'お気に入り解除はできず、ログインページへリダイレクトすることを確認' do
-        expect {
+        expect do
           delete "/favorites/#{@app.id}/destroy"
-        }.not_to change{Favorite.count}
+        end.not_to change { Favorite.count }
         expect(response).to redirect_to new_user_session_path
       end
     end

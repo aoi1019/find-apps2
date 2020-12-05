@@ -1,0 +1,32 @@
+<div class="layout column container_bLYok" id="comments">
+  <div class="layout align-center first_row">
+    <div class="comment_user_name">
+      <%= comment.user.name %>
+    </div>
+  </div>
+  <div class="layout align-center third_row">
+    <% if comment.user.image.present? %>
+      <%= link_to image_tag(comment.user.image, class: "comment-user-icon"), user_path(comment.user_id) %>
+    <% else %>
+      <%= link_to image_tag("/images/default.jpeg", class: 'comment-user-icon'), user_path(comment.user_id) %>
+    <% end %>
+
+      <div class="comment-user-text">
+        <%= comment.content %>
+        <div class="comment-row-area">
+          <div class="comment-created">
+            <i class="far fa-clock clock-icon"></i> <%= time_ago_in_words(comment.created_at) %>前
+          </div>
+          <% if user_signed_in? && current_user.id == comment.user_id %>
+            <div class="comment-destroy">
+              <%= link_to app_comment_path(comment), method: :delete,
+                                                    class: 'btn btn-dark btn-xs comment-destroy-btn',
+                                                    data: { confirm: "本当にコメントを削除して良いですか？" } do %>
+                                                    <i class="fas fa-trash-alt"></i>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+    </div>
+  </div>
+</div>
