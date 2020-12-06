@@ -78,4 +78,66 @@ RSpec.describe 'Apps', type: :request do
       expect(response.body).to include("#{@app.period}")
     end
   end
+
+  describe '新規投稿ページ' do
+    before do
+      sign_in(@user)
+      get new_app_path
+    end
+    it 'アプリ名の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('アプリ名')
+    end
+    it '画像の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('画像')
+    end
+    it '説明の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('説明')
+    end
+    it 'プログラミング言語の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('プログラミング言語')
+    end
+    it '技術的なポイントの入力ラベルが表示されることを確認' do
+      expect(response.body).to include('技術的なポイント')
+    end
+    it 'アプリのURLの入力ラベルが表示されることを確認' do
+      expect(response.body).to include('アプリのURL')
+    end
+    it '開発日数（日）の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('開発日数（日）')
+    end
+    it '投稿するボタンが表示されることを確認' do
+      expect(response.body).to include('投稿')
+    end
+  end
+
+  describe 'アプリ編集ページ' do
+    before do
+      sign_in(@user)
+      get edit_app_path(@app)
+    end
+    it 'アプリ名の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('アプリ名')
+    end
+    it '画像の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('画像')
+    end
+    it '説明の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('説明')
+    end
+    it 'プログラミング言語の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('プログラミング言語')
+    end
+    it '技術的なポイントの入力ラベルが表示されることを確認' do
+      expect(response.body).to include('技術的なポイント')
+    end
+    it 'アプリのURLの入力ラベルが表示されることを確認' do
+      expect(response.body).to include('アプリのURL')
+    end
+    it '開発日数（日）の入力ラベルが表示されることを確認' do
+      expect(response.body).to include('開発日数（日）')
+    end
+    it '投稿するボタンが表示されることを確認' do
+      expect(response.body).to include('投稿')
+    end
+  end
 end
