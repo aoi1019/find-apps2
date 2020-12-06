@@ -1,4 +1,4 @@
-# 📌 Find Apps（ファインド アップス）
+# 📌 Find Apps
 個人規模のオリジナルアプリをシェアするサービスです。
 
 ※こちらは前回のサービスのリメイク版です。<br>
@@ -151,8 +151,8 @@ https://find-apps.net/
 
 
 # 📌 SNS
-- Twitter ： https://twitter.com/aoi_programming
-- Qiita : https://qiita.com/aoi1019m
-- BLOG : https://tech.aoiblog.net
-- Affiliate Site : https://aoiblog.net
-- GitHub : https://github.com/aoi1019/
+- [Twitter](https://twitter.com/aoi_programming)
+- [Qiita](https://qiita.com/aoi1019m)
+- [BLOG](https://tech.aoiblog.net)
+- [Affiliate Site](https://aoiblog.net)
+- [GitHub](https://github.com/aoi1019/)
