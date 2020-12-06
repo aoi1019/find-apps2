@@ -9,7 +9,7 @@ FactoryBot.define do
     twitter               { "twitter" }
     qiita                 { "twitter" }
     after(:build) do |app|
-      app.image.attach(io: File.open('public/images/youtube.png'), filename: 'test_image.png')
+      app.image.attach(io: File.open('public/images/youtube.png'), filename: 'youtube.png')
     end
   end
 end
