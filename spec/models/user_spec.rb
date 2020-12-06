@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   before do
-    @user = FactoryBot.create(:user)
+    @user = FactoryBot.build(:user)
   end
   describe 'ユーザー新規登録' do
     context '新規登録がうまくいく時' do
@@ -21,6 +21,11 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('名前を入力してください')
       end
+      it 'nameが20文字以上だと登録できない' do
+        @user.name = 'a' * 21
+        @user.valid?
+        expect(@user.errors.full_messages).to include('名前は20文字以内で入力してください')
+      end
       it 'emailが空では登録できない' do
         @user.email = ''
         @user.valid?
@@ -31,10 +36,20 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
+      it 'passwordが空では登録できない' do
+        @user.password_confirmation = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
+      end
       it 'school_idが1では登録できない' do
         @user.school_id = 1
         @user.valid?
-        expect(@user.errors.full_messages).to include('Schoolは1以外の値にしてください')
+        expect(@user.errors.full_messages).to include('スクールは1以外の値にしてください')
+      end
+      it 'profileが200文字以上では登録できない' do
+        @user.profile = "a" * 201
+        @user.valid?
+        expect(@user.errors.full_messages).to include('プロフィールは200文字以内で入力してください')
       end
     end
   end
