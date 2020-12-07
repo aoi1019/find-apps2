@@ -5,27 +5,27 @@
     </h1>
     <ul class="header__bar__user_nav">
       <% if user_signed_in? %>
-        <li class="header__bar__user_nav__btn">
-          <%= link_to new_app_path do %><span><i class="fas fa-edit"></i> 新しい投稿</span><% end %>
-        </li>
         <% if current_user.notification == true %>
           <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color new-notification"><i class="fas fa-circle n-circle"></i><i class="fas fa-bell faa-shake animated"></i></span><% end %></li>
         <% else %>
           <li class="notification-btn btn"><%= link_to notifications_path do %><span class="notification-color no-notification"><i class="far fa-bell"></i></span><% end %></li>
         <% end %>
         <li class="dropdown user_name">
-            <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i> <%= current_user.name %> <b class="caret"></b>
-            </button>
-            <ul class="dropdown-menu">
-              <li><%= link_to current_user do %><span><i class="fas fa-user-circle"></i> マイページ</span><% end %></li>
-              <li><%= link_to edit_user_registration_path do %><span><i class="fas fa-user-edit"></i> ユーザー編集</span><% end %></li>
-              <li><%= link_to favorites_path do %><span><i class="fas fa-star"></i> お気に入り</span><% end %></li>
-              <li><%= link_to users_path do %><span><i class="fas fa-user-friends"></i> ユーザーを探す</span><% end %></li>
-              <li class="divider"></li>
-              <li><%= link_to destroy_user_session_path, method: :delete do %><span><i class="fas fa-sign-out-alt"></i> ログアウト</span><% end %></li>
-            </ul>
-          </li>
+          <button type="button" class="btn btn-danger btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user"></i> <%= current_user.name %> <b class="caret"></b>
+          </button>
+          <ul class="dropdown-menu">
+            <li><%= link_to current_user do %><span><i class="fas fa-user-circle"></i> マイページ</span><% end %></li>
+            <li><%= link_to edit_user_registration_path do %><span><i class="fas fa-user-edit"></i> ユーザー編集</span><% end %></li>
+            <li><%= link_to favorites_path do %><span><i class="fas fa-star"></i> お気に入り</span><% end %></li>
+            <li><%= link_to users_path do %><span><i class="fas fa-user-friends"></i> ユーザーを探す</span><% end %></li>
+            <li class="divider"></li>
+            <li><%= link_to destroy_user_session_path, method: :delete do %><span><i class="fas fa-sign-out-alt"></i> ログアウト</span><% end %></li>
+          </ul>
+        </li>
+        <li class="btn btn-warning btn-sm">
+          <%= link_to new_app_path do %><span class="new-app-btn"><i class="fas fa-edit"></i> 新規投稿</span><% end %>
+        </li>
       <% else %>
         <li class="header-btn">
         <%= link_to users_guest_sign_in_path, method: :post, class:'btn btn-success' do %><span><i class="fas fa-user-friends"></i> ゲストログイン</span> <% end %>

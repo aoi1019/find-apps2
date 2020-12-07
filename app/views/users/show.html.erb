@@ -56,7 +56,7 @@
   <div class="container">
     <div class="row">
       <div class="col-6 col-offset-6 text-center user-edit-btn">
-        <%= link_to 'ユーザ情報を編集する', edit_user_registration_path, class: "btn btn-success btn-lg" %>
+        <%= link_to edit_user_registration_path, class: "btn btn-success btn-lg" do %><span><i class="fas fa-user-edit"></i> ユーザー情報を編集</span> <% end %>
       </div>
     </div>
   </div>
