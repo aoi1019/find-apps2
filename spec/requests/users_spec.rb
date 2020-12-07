@@ -5,6 +5,43 @@ RSpec.describe 'Users', type: :request do
     @user = FactoryBot.create(:user)
   end
 
+  describe 'ログインページ' do
+    context 'ログインしている場合' do
+      it '遷移すると、トップページへリダイレクトすることを確認' do
+        sign_in(@user)
+        get new_user_session_path
+        expect(response.status).not_to eq 200
+        expect(response).to redirect_to root_path
+      end
+    end
+    context 'ログインしていない場合' do
+      before do
+        get new_user_session_path
+      end
+      it '正常にレスポンスが表示することを確認' do
+        expect(response.status).to eq 200
+      end
+      it 'タイトル「ログイン」を確認' do
+        expect(response.body).to include('ログイン')
+      end
+      it 'メールアドレスラベルを確認' do
+        expect(response.body).to include('メールアドレス')
+      end
+      it 'パスワードラベルを確認' do
+        expect(response.body).to include('パスワード')
+      end
+      it 'Googleでログイン表示を確認' do
+        expect(response.body).to include('Googleでログイン')
+      end
+      it 'Facebookでログイン表示を確認' do
+        expect(response.body).to include('Facebookでログイン')
+      end
+      it '新規登録リンクを確認' do
+        expect(response.body).to include('新規登録はこちら')
+      end
+    end
+  end
+
   describe 'ユーザー詳細ページ' do
     before do
       get user_path(@user)

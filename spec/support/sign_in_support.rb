@@ -1,5 +1,4 @@
 module SignInSupport
-
   def sign_in_system(user)
     visit new_user_session_path
     fill_in 'email', with: user.email
