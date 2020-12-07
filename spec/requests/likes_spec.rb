@@ -15,6 +15,23 @@ RSpec.describe 'Likes', type: :request do
           post "/likes/#{@app.id}/create"
         }.to change{ Like.count }.by(1)
       end
+      it 'Ajaxによるいいねできることを確認' do
+        expect {
+          post "/likes/#{@app.id}/create", xhr: true
+        }.to change{ Like.count }.by(1)
+      end
+      it 'いいね解除できることを確認' do
+        @user.like(@app)
+        expect {
+          delete "/likes/#{@app.id}/destroy"
+        }.to change{ Like.count }.by(-1)
+      end
+      it 'Ajaxによるいいね解除できることを確認' do
+        @user.like(@app)
+        expect {
+          delete "/likes/#{@app.id}/destroy", xhr: true
+        }.to change{ Like.count }.by(-1)
+      end
     end
 
     context 'ログインしてない場合' do

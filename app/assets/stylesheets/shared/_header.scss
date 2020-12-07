@@ -95,3 +95,10 @@ li {
     color: white;
   }
 }
+
+.new-app-btn a {
+  color: white;
+  &:hover {
+    text-decoration: none;
+  }
+}
