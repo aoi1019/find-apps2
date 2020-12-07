@@ -23,8 +23,8 @@
             <li><%= link_to destroy_user_session_path, method: :delete do %><span><i class="fas fa-sign-out-alt"></i> ログアウト</span><% end %></li>
           </ul>
         </li>
-        <li class="btn btn-warning btn-sm">
-          <%= link_to new_app_path do %><span class="new-app-btn"><i class="fas fa-edit"></i> 新規投稿</span><% end %>
+        <li class="btn btn-warning btn-sm new-app-btn">
+          <%= link_to new_app_path do %><span class="new-app-btn"><i class="fas fa-edit "></i> 新規投稿</span><% end %>
         </li>
       <% else %>
         <li class="header-btn">
