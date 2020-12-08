@@ -1,0 +1,18 @@
+<div class="container users-contents">
+  <h3 class="title_border users-title"><i class="fas fa-list-alt"></i> 
+  <% if @user.present? %>
+    <%= "#{@user.school.name}受講生" %>
+  <% else %>
+    まだ該当の受講生はいません。
+  <% end %>
+  </h3>
+  <div class="text-center users-link">
+    <%= link_to 'ユーザー検索ページに戻る', users_path %>
+  </div>
+  <div class="row">
+
+    <ul class="user-lists">
+      <%= render @users %>
+    </ul>
+  </div>
+</div>
