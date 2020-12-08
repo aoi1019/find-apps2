@@ -1,7 +1,10 @@
 .users-contents {
   margin-top: 100px;
   .users-title {
-    color: #555;
+    font-size: 3vh;
+    line-height: 1.5;
+    color: #000;
+    font-weight: bold;
     text-decoration: none;
   }
   .search-area {
@@ -14,6 +17,27 @@
     .search-select {
       height: 50px;
       margin: 10px;
+    }
+  }
+  .school-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .school img{
+      border: 1px solid #000;
+      border-radius: 25px;
+      padding: 20px;
+      width: 272px;
+      height: 70%;
+      max-height: 90px;
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      #logo {
+        height: 100vw;
+        width: 100%!important;
+      }
     }
   }
   .user-lists {

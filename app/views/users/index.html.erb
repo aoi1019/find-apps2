@@ -1,20 +1,61 @@
 <div class="container users-contents">
-  <h3 class="title_border"><i class="fas fa-list-alt"></i><%= link_to "すべてのユーザー", users_path, class: 'users-title' %></h3>
+  <h2 class="title_border"><i class="fas fa-user-friends fa-lg"></i><%= link_to "すべてのユーザー", users_path, class: 'users-title' %></h2>
   <div class="row">
 
-      <%= form_with(url: users_path, local: true, method: :get, class: 'search-area') do |f| %>
-        <%= f.text_field :keyword, placeholder: 'ユーザー名で検索', class: 'user-search-field' %>
-        <%#= f.collection_select :school_id, School.all, :id, :name %>
-        <%#= f.collection_select :school, @school, :name, :name ,{class:"search-select", id:"school-id"}, include_blank: 'スクール名で検索' %>
-        <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
-      <% end %>
+    <%= form_with(url: users_path, local: true, method: :get, class: 'search-area') do |f| %>
+      <%= f.text_field :keyword, placeholder: 'ユーザー名で検索', class: 'user-search-field' %>
+      <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
+    <% end %>
 
-      <% if @search_word.present? %>
-        <h3 class="title_border">「<%= @search_word %>」の検索結果(<%= @users.count%>)</h3>
-        <div class="back-link">
-          <%= link_to "前のページに戻る", users_path if @users.count == 0 %>
-        </div>
-      <% end %>
+    <h3 class="title_border users-title"><i class="fas fa-search fa-lg"></i> スクール名で探す</h3>
+
+    <div class="school-area text-center">
+      <div class="school">
+        <%= link_to image_tag("/images/techcamp.png"), '/users/school/2', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/tech-academy.png"), '/users/school/3', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/code-camp.png"), '/users/school/4', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/potepan-camp.png"), '/users/school/5', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/runteq.png"), '/users/school/6', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/dmmwebcamp.png"), '/users/school/7', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/skillhacks.png"), '/users/school/8', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/dive-into-code.png"), '/users/school/13', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/raisetech.png"), '/users/school/9', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/codevillage.png"), '/users/school/10', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/techboost.png"), '/users/school/11', id: 'school-logo' %>
+      </div>
+      <div class="school">
+        <%= link_to image_tag("/images/samurai.png"), '/users/school/12', id: 'school-logo' %>
+      </div>
+    </div>
+    
+
+
+    <% if @search_word.present? %>
+      <h3 class="title_border">「<%= @search_word %>」の検索結果(<%= @users.count%>)</h3>
+      <div class="back-link">
+        <%= link_to "前のページに戻る", users_path if @users.count == 0 %>
+      </div>
+    <% end %>
 
     <ul class="user-lists">
     <%= render @users %>
