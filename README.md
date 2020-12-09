@@ -5,90 +5,12 @@
 【前回のGitHubリポジトリ】https://github.com/aoi1019/find-apps
 
 独自ドメインで公開中です。（追加実装中）<br>
-https://find-apps.net/
-## 🌐 アプリのトップページ
-[![Image from Gyazo](https://i.gyazo.com/0df7360c4eca187a09e8138d30f6565e.jpg)](https://gyazo.com/0df7360c4eca187a09e8138d30f6565e)
+**https://find-apps.net/**
+
 
 # 📕 アプリ概要
 ### 自分で開発したオリジナルアプリを世界中にシェアする。<br>これを実現できるように設計されたサービスです。
-<br>
 
-# 📌 アプリ機能
-## ✔︎ ゲストログイン機能
-トップページの「<font color="IndianRed">**ゲストログイン**</font>」をクリックするだけで簡単にログインできます。
-<!-- ### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/117c6cf7ebf506981dae327b58ae2fec.gif)](https://gyazo.com/117c6cf7ebf506981dae327b58ae2fec) -->
-
-## ✔︎ ユーザー登録機能
-新規登録時には以下の情報のみで登録できます。
-- 名前
-- メールアドレス
-- パスワード
-- 確認用パスワード
-
-## ✔︎ ユーザー編集機能
-新規登録時に登録できなかった点を編集ページで編集することができます。
-- 名前 <font color="IndianRed">[必須]</font>
-- プロフィール画像
-- 自己紹介文
-- Twitterアカウント
-- 出身スクール選択（独学・その他もあり） <font color="IndianRed">[必須]</font>
-<!-- ### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/fa57d5b8796080d293e42df12c38b7c0.gif)](https://gyazo.com/fa57d5b8796080d293e42df12c38b7c0) -->
-
-## ✔︎ アプリ投稿 / 編集機能
-- アプリの名称 <font color="IndianRed">[必須]</font>
-- アプリの画像 <font color="IndianRed">[必須]</font>
-- アプリの説明
-- 開発ポイント
-- 開発言語 <font color="IndianRed">[必須]</font>
-- アプリのURL <font color="IndianRed">[必須]</font>
-- 開発期間[日]
-
-<!-- [![Image from Gyazo](https://i.gyazo.com/a990e548c2c28c22a86e919aa53f9698.png)](https://gyazo.com/a990e548c2c28c22a86e919aa53f9698) -->
-
-## ✔ コメント / コメント削除機能
-- コメントできる
-- 自分で送信したコメントを削除できる
-- 投稿にコメントが何個あるか確認できる
-<!-- ### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/dab36da8676662d6ef8ec213c9a46e7c.gif)](https://gyazo.com/dab36da8676662d6ef8ec213c9a46e7c) -->
-
-## ✔︎ いいね / いいね解除機能
-- **1人のユーザーは1つの投稿に1回いいねができる**
-- いいねすると赤色に変化
-- いいね解除すると元の色に戻る
-- Ajaxによる開発
-<!-- ### 🌐 **実際の挙動**
-[![Image from Gyazo](https://i.gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b.gif)](https://gyazo.com/fc3afa1c5dc6fd92cff95dc1d4e5306b) -->
-
-## ✔︎ お気に入り登録 / 解除機能
-- お気に入り一覧ページ
-- お気に入り登録をすると灰色に変化
-- お気に入り解除すると青色に戻る
-- Ajaxによる登録・解除
-
-## ✔︎ 通知機能
-- コメント・いいねされたら相手に通知がいく
-- 通知があると赤色に変化
-- 通知ページを開いたら色が元に戻る
-- 通知一覧ページ
-
-## ✔︎ SNS認証登録・ログイン
-- Googleアカウントを使って新規登録・ログインができる
-- Facebookアカウントを使って新規登録・ログインができる
-
-## ✔︎ reCAPTCHAを使って新規登録
-- 新規登録時にチェックを入れないと登録ができません。
-
-[![Image from Gyazo](https://i.gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b.gif)](https://gyazo.com/045ff8e3288f22a68fbe35ad1f81cd4b)
-
-## ✔︎ 検索機能
-- アプリ名
-- 開発プログラミング言語
-
-上記の2つを検索することができます。
-※gemは活用していません。
 
 # 📚 目指した課題解決
 私は、アプリを開発する際に「私と同じ駆け出しエンジニアは、どんなアプリを開発しているのだろうか。」と疑問に思い、Googleで検索するもあまりヒットはしませんでした。
@@ -117,6 +39,115 @@ https://find-apps.net/
   - 新しい人材を確保したいが経験値のあるエンジニアの確保は難しい。そこで「未経験のエンジニアでも技術力があって面白いアイディアがあるなら採用したい」と考えるため。
   - DM機能を追加してそれぞれがメッセージでやりとりができるようになれば最高なため。
 
+
+# 📌 アプリ機能
+## ✔︎ ゲストログイン機能
+トップページの「<font color="IndianRed">**ゲストログイン**</font>」をクリックするだけで簡単にログインできます。
+
+## ✔︎ ユーザー登録機能
+新規登録時には以下の情報のみで登録できます。
+- 名前
+- メールアドレス
+- パスワード
+- 確認用パスワード
+
+## ✔︎ ユーザー編集機能
+新規登録時に登録できなかった点を編集ページで編集することができます。
+- 名前 <font color="IndianRed">[必須]</font>
+- プロフィール画像
+- 自己紹介文
+- Twitterアカウント
+- 出身スクール選択（独学・その他もあり） <font color="IndianRed">[必須]</font>
+
+
+## ✔︎ アプリ投稿 / 編集機能
+- アプリの名称 <font color="IndianRed">[必須]</font>
+- アプリの画像 <font color="IndianRed">[必須]</font>
+- アプリの説明
+- 開発ポイント
+- 開発言語 <font color="IndianRed">[必須]</font>
+- アプリのURL <font color="IndianRed">[必須]</font>
+- 開発期間[日]
+
+<!-- [![Image from Gyazo](https://i.gyazo.com/a990e548c2c28c22a86e919aa53f9698.png)](https://gyazo.com/a990e548c2c28c22a86e919aa53f9698) -->
+
+## ✔ コメント / コメント削除機能
+- コメントできる
+- 自分で送信したコメントを削除できる
+- 投稿にコメントが何個あるか確認できる
+- 特にデザインに力を入れました！
+
+### 💻 実際のデザイン
+
+[![Image from Gyazo](https://i.gyazo.com/421bac74b21e80316938f67d42757ffd.png)](https://gyazo.com/421bac74b21e80316938f67d42757ffd)
+
+## ✔︎ いいね / いいね解除機能
+- **1人のユーザーは1つの投稿に1回いいねができる**
+- いいねすると赤色に変化
+- いいね解除すると元の色に戻る
+- Ajaxによる開発
+
+### 💻 実際の動き
+[![Image from Gyazo](https://i.gyazo.com/a53683b2c86aa2160b4cd40479d4ab34.gif)](https://gyazo.com/a53683b2c86aa2160b4cd40479d4ab34)
+
+
+## ✔︎ お気に入り登録 / 解除機能
+- お気に入り一覧ページ
+- お気に入り登録をすると灰色に変化
+- お気に入り解除すると青色に戻る
+- Ajaxによる登録・解除
+
+### 💻 実際の動き
+
+- Ajaxによるお気に入り登録ができます
+- お気に入りした投稿はお気に入り一覧に表示されます
+
+[![Image from Gyazo](https://i.gyazo.com/37fa35df6989fb9db516b345f4ec3e07.gif)](https://gyazo.com/37fa35df6989fb9db516b345f4ec3e07)
+
+
+## ✔︎ 通知機能
+- コメント・いいねされたら相手に通知がいく
+- 通知があると赤色に変化
+- 通知ページを開いたら色が元に戻る
+- 通知一覧ページ
+
+### ✅ 通常時
+
+[![Image from Gyazo](https://i.gyazo.com/8c92cd846a30e3c3fdd78cd84eab6bbd.png)](https://gyazo.com/8c92cd846a30e3c3fdd78cd84eab6bbd)
+
+### ✅ 通知があるとき
+
+[![Image from Gyazo](https://i.gyazo.com/92ae75d0cd63b6a9e33ed60cd9208177.gif)](https://gyazo.com/92ae75d0cd63b6a9e33ed60cd9208177)
+
+## ✔︎ SNS認証登録・ログイン
+- Googleアカウントを使って新規登録・ログインができる
+- Facebookアカウントを使って新規登録・ログインができる
+
+### 実際のデザイン
+
+[![Image from Gyazo](https://i.gyazo.com/55f562502e663b148cdd1c9744e31fde.png)](https://gyazo.com/55f562502e663b148cdd1c9744e31fde)
+
+## ✔︎ 検索機能
+- アプリ名
+- 開発プログラミング言語
+- ユーザー名
+
+上記の2つを検索することができます。
+
+※gemは活用していません。
+
+
+## ✔︎ スクール受講生の一覧表示ページを作成
+- 最後になりましたが、こちらが**1番実装したかったポイントになります！！**
+- プロフィール編集時に選択するプログラミングスクールですが、同じスクール生は一覧ページにまとめて表示するように試みました。
+画像の通りです。
+クリックするとスクール生の一覧ページに遷移できます。
+
+お時間がある方はぜひご覧ください！
+
+[» 一覧ページはこちら](https://find-apps.net/users)
+
+[![Image from Gyazo](https://i.gyazo.com/2709235c411742411e9c278edbfd0d73.png)](https://gyazo.com/2709235c411742411e9c278edbfd0d73)
 
 # 💻 使用技術
 - HTML / CSS
@@ -151,8 +182,8 @@ https://find-apps.net/
 
 
 # 📌 SNS
-- [Twitter](https://twitter.com/aoi_programming)
-- [Qiita](https://qiita.com/aoi1019m)
-- [BLOG](https://tech.aoiblog.net)
-- [Affiliate Site](https://aoiblog.net)
-- [GitHub](https://github.com/aoi1019/)
+- [» Twitterはこちら](https://twitter.com/aoi_programming)
+- [» Qiitaはこちら](https://qiita.com/aoi1019m)
+- [» BLOGはこちら](https://tech.aoiblog.net)
+- [» Affiliate Siteはこちら](https://aoiblog.net)
+- [» GitHubはこちら](https://github.com/aoi1019/)
