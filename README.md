@@ -5,9 +5,8 @@
 【前回のGitHubリポジトリ】https://github.com/aoi1019/find-apps
 
 独自ドメインで公開中です。（追加実装中）<br>
-https://find-apps.net/
-## 🌐 アプリのトップページ
-[![Image from Gyazo](https://i.gyazo.com/0df7360c4eca187a09e8138d30f6565e.jpg)](https://gyazo.com/0df7360c4eca187a09e8138d30f6565e)
+**https://find-apps.net/**
+
 
 # 📕 アプリ概要
 ### 自分で開発したオリジナルアプリを世界中にシェアする。<br>これを実現できるように設計されたサービスです。
