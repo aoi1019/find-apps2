@@ -1,7 +1,7 @@
 <li class="list">
   <%= link_to app_path(app.id) do %>
     <div class="app_content">
-      <div class="card section">
+      <div class="section">
         <div class="eyecatch_container app_img_content">
           <% if app.image.present? %>
             <%= link_to image_tag(app.image, class: 'eyecatch app_img' ), app_path(app.id), method: :get %>

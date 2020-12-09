@@ -1,11 +1,17 @@
 .users-contents {
-  margin-top: 100px;
+  margin-top: 80px;
   .users-title {
-    font-size: 3vh;
+    font-size: 2.5vh;
     line-height: 1.5;
     color: #000;
     font-weight: bold;
     text-decoration: none;
+  }
+  .search-title {
+    margin:30px!important;
+    margin-right: 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
   }
   .search-area {
     .user-search-field {
@@ -22,18 +28,22 @@
   .school-area {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     .school img{
       border: 1px solid #000;
       border-radius: 25px;
       padding: 20px;
-      width: 272px;
+      width: 270px;
       height: 70%;
       max-height: 90px;
       margin: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
+      &:hover {
+        opacity: 0.5 ;
+      }
       #logo {
         height: 100vw;
         width: 100%!important;
@@ -46,6 +56,9 @@
     flex-wrap: wrap;
     .user-list {
       margin: 30px;
+      &:hover {
+        opacity: 0.6;
+      }
       .user-icon-area {
         .user-icon {
           width: 160px;
