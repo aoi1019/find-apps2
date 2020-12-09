@@ -3,7 +3,7 @@ class AppsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @apps = App.includes(:user).order('created_at DESC').page(params[:page]).per(6).search(params[:keyword])
+    @apps = App.includes(:user).order('created_at DESC').page(params[:page]).per(3).search(params[:keyword])
     @search_word = params[:keyword]
   end
 

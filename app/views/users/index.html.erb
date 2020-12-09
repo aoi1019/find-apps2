@@ -1,14 +1,8 @@
 <div class="container users-contents">
   
   <div class="row">
-    <h3 class="search-title text-center title_border"><i class="fas fa-search"></i> ユーザー名で探す</h3>
 
-    <%= form_with(url: users_path, local: true, method: :get, class: 'search-area') do |f| %>
-      <%= f.text_field :keyword, placeholder: '山田太郎...', class: 'user-search-field' %>
-      <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
-    <% end %>
-
-    <h3 class="search-title text-center title_border"><i class="fas fa-search"></i> スクール名で探す</h3>
+    <h3 class="search-title text-center title_border"><i class="fas fa-search"></i> スクール受講生を探す</h3>
 
     <div class="school-area text-center">
       <div class="school">
@@ -51,6 +45,10 @@
     
 
     <h2 class="title_border"><%= link_to users_path, class: 'users-title' do %><span><i class="fas fa-user-friends"></i> すべてのユーザー</span><% end %></h2>
+    <%= form_with(url: users_path, local: true, method: :get, class: 'search-area') do |f| %>
+      <%= f.text_field :keyword, placeholder: 'ユーザー名で探す...', class: 'user-search-field' %>
+      <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
+    <% end %>
     <% if @search_word.present? %>
       <h3 class="text-center">「<%= @search_word %>」の検索結果(<%= @users.count%>)</h3>
       <div class="back-link">
