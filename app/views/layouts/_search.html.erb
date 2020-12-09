@@ -3,6 +3,10 @@
   <%= f.submit '検索', class: 'btn btn-primary search-btn' %>
 <% end %>
 <% if @search_word.present? %>
-  <h3 class="title_border">「<%= @search_word %>」の検索結果</h3>
-  <%= link_to "トップページに戻る", root_path if @apps.count == 0 %>
+    <h3 class="title_border">「<%= @search_word %>」の検索結果</h3>
+    <% if @apps.count == 0 %>
+      <div class="search-result text-center">
+        <%= link_to "トップページに戻る", root_path %>
+      </div>
+    <% end %>
 <% end %>

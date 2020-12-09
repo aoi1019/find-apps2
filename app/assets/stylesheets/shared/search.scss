@@ -1,6 +1,6 @@
 .search-area {
   width: 100%;
-  margin:20px;
+  margin: 20px;
   text-align: center;
   .search-field {
     width: 30vw;
@@ -16,4 +16,7 @@
     margin-bottom: 3px;
     // border-radius: 50px;
   }
+}
+.search-result{
+  margin-bottom: 67vh;
 }
