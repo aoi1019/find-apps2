@@ -80,6 +80,9 @@ li {
   margin: 0 7px;
   border-radius: 100px;
   // padding: 100px;
+  &:hover {
+    opacity: 0.5 ;
+  }
 }
 
 .n-circle {
