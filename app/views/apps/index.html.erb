@@ -1,5 +1,5 @@
 <div class="container app_contents">
-  <h2 class="apps_title title_border"><i class="fas fa-list-alt"></i> アプリ一覧</h2>
+  <h2 class="apps-title title_border"><i class="fas fa-list-alt"></i><%= link_to 'アプリ一覧', root_path, class: "index-title" %></h2>
   <%= render 'layouts/search' %>
   <ul class="app_lists">
     <%= render @apps %>

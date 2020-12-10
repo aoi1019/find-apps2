@@ -5,12 +5,16 @@
   align-items: center;
   padding: 10vh 0 0;
   width: 45vh;
-  .apps_title {
+  .apps-title {
     width: 100%;
     font-size: 3vh;
     line-height: 1.5;
     font-weight: bold;
     text-align: center;
+    .index-title {
+      color: black;
+      text-decoration: none;
+    }
   }
   .app_lists {
     width: 100vw;
