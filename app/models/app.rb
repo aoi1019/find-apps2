@@ -12,6 +12,7 @@ class App < ApplicationRecord
   validates :language, presence: true, length: { maximum: 50 }
   validates :reference, presence: true, length: { maximum: 100 }
   validates :image, presence: true
+  validates :period, numericality: { only_integer: true }
 
   def already_liked?(user)
     likes.exists?(user_id: user.id)
