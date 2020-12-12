@@ -13,7 +13,7 @@
         <label class="form-text">アプリ名</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"input-default apps-text", id:"apps_text", placeholder:"例）Find Apps", autofocus: true %>
+      <%= f.text_area :name, class:"input-default apps-text", id:"app-name", placeholder:"例）Find Apps", autofocus: true %>
     </div>
 
     <div class="form-group">
@@ -21,7 +21,7 @@
         <label class="form-text">画像</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.file_field :image, accept: 'image/jpeg,image/png', class: 'input-default apps-text', id: 'apps_text' %>
+      <%= f.file_field :image, accept: 'image/jpeg,image/png', class: 'input-default apps-text', id: 'app-image' %>
     </div>
 
     <div class="form-group">
@@ -29,7 +29,7 @@
         <label class="form-text">説明</label>
         <span class="dispensable">任意</span>
       </div>
-      <%= f.text_area :description, class:"app-text app-description", id:"", placeholder:"どんなアプリなのか説明してください。", rows:"7" , maxlength:"1000" %>
+      <%= f.text_area :description, class:"app-text app-description", id:"app-description", placeholder:"どんなアプリなのか説明してください。", rows:"7" , maxlength:"1000" %>
     </div>
 
     <div class="form-group">
@@ -37,7 +37,7 @@
         <label class="form-text">プログラミング言語</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :language, class:"input-default app-text", id:"apps_text", placeholder:"例）Ruby on Rails" %>
+      <%= f.text_field :language, class:"input-default app-text", id:"app-language", placeholder:"例）Ruby on Rails" %>
     </div>
 
     <div class="form-group">
@@ -45,7 +45,7 @@
         <label class="form-text">技術的なポイント</label>
         <span class="dispensable">任意</span>
       </div>
-      <%= f.text_area :point, class:"app-description app-text", id:"apps_text", placeholder:"例）Bootstrapを用いて開発しました。", rows:"4" , maxlength:"1000" %>
+      <%= f.text_area :point, class:"app-description app-text", id:"app-point", placeholder:"例）Bootstrapを用いて開発しました。", rows:"4" , maxlength:"1000" %>
     </div>
 
     <div class="form-group">
@@ -53,7 +53,7 @@
         <label class="form-text">アプリのURL</label>
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_field :reference, class:"input-default app-text", id:"apps_text", placeholder:"例）https://aoiblog.net" %>
+      <%= f.text_field :reference, class:"input-default app-text", id:"app-reference", placeholder:"例）https://aoiblog.net" %>
     </div>
 
     <div class="form-group">
@@ -61,12 +61,12 @@
         <label class="form-text">開発日数（日）</label>
         <span class="dispensable">任意</span>
       </div>
-      <%= f.text_field :period, class:"input-default app-text", id:"apps_text", placeholder:"例）30" %>
+      <%= f.text_field :period, class:"input-default app-text", id:"app-period", placeholder:"例）30" %>
       <p>※数字のみ記入してください。</p>
     </div>
 
     <div class='login-btn'>
-      <%= f.submit "更新" ,class:"login-blue-btn" %>
+      <%= f.submit "更新する" ,class:"login-blue-btn" %>
     </div>
   </div>
 <% end %>
