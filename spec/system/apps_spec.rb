@@ -117,21 +117,44 @@ RSpec.describe "アプリ編集", type: :system do
   end
 end
 
-# RSpec.describe 'アプリ削除', type: :system do
-#   before do
-#     @user = FactoryBot.create(:user)
-#     @app1 = FactoryBot.create(:app, user: @user)
-#   end
-#   context 'アプリ削除できるとき' do
-#     it 'ログインしたユーザーは自分のアプリを削除できる' do
-#       #ログインする
-#       sign_in_system(@user)
-#       #アプリ詳細ページに遷移
-#       visit app_path(@app1)
-#       #アプリの削除ボタンがあることを確認
-#       expect(page).to have_link('アプリの削除')
-#       #アプリが削除できることを確認
-
-#     end
-#   end
-# end
+RSpec.describe 'アプリ削除', type: :system do
+  before do
+    @user = FactoryBot.create(:user)
+    @user2 = FactoryBot.create(:user)
+    @app1 = FactoryBot.create(:app, user: @user)
+    @app2 = FactoryBot.create(:app, user: @user2)
+  end
+  context 'アプリ削除できるとき' do
+    it 'ログインしたユーザーは自分のアプリを削除できる' do
+      #ログインする
+      sign_in_system(@user)
+      #アプリ詳細ページに遷移
+      visit app_path(@app1)
+      #アプリの削除ボタンがあることを確認
+      expect(page).to have_link('アプリの削除')
+      #アプリが削除できることを確認
+      click_on 'アプリの削除'
+      page.driver.browser.switch_to.alert.accept
+      #トップページに遷移することを確認
+      expect(current_path).to eq root_path
+      #アプリが削除されましたと言うフラッシュメッセージを確認
+      expect(page).to have_content('削除が完了しました！')
+    end
+  end
+  context 'アプリ削除できないとき' do
+    it '自分のアプリでなければ削除できない' do
+      #ログインする
+      sign_in_system(@user)
+      #アプリ2詳細ページに遷移する
+      visit app_path(@app2)
+      #アプリ編集ボタンがないことを確認
+      expect(page).to have_no_link('アプリの編集')
+    end
+    it 'ログインしないと削除できない' do
+      #アプリ詳細ページに遷移
+      visit app_path(@app1)
+      #アプリ編集ボタンがないことを確認
+      expect(page).to have_no_link('アプリの編集')
+    end
+  end
+end
