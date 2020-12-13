@@ -26,6 +26,6 @@ RSpec.describe "Comments", type: :system do
     #アプリ詳細ページに遷移する
     visit app_path(@app)
     #アプリ詳細ページにコメント投稿蘭が表示されないことを確認
-    expect(page).to have_no_content('.comment_content')
+    expect(page).to have_no_selector('.comment_content')
   end
 end
