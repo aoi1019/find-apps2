@@ -158,3 +158,41 @@ RSpec.describe 'アプリ削除', type: :system do
     end
   end
 end
+
+RSpec.describe 'アプリ詳細', type: :system do
+  before do
+    @user = FactoryBot.create(:user)
+    @app = FactoryBot.create(:app)
+  end
+  it 'ログインしたユーザーはアプリ詳細ページに遷移してコメント投稿欄が表示される' do
+    #ログインする
+    sign_in_system(@user)
+    visit root_path
+    #アプリ詳細ページに遷移
+    visit app_path(@app)
+    #詳細ページにアプリの内容が含まれている
+    expect(page).to have_content(@app.name)
+    expect(page).to have_content(@app.description)
+    expect(page).to have_content(@app.point)
+    expect(page).to have_content(@app.period)
+    expect(page).to have_content(@app.language)
+    expect(page).to have_content(@app.reference)
+    #コメント用のフォームが存在する
+    expect(page).to have_selector('.post_review_container')
+  end
+  it 'ログインしていない状態でアプリ詳細ページに遷移はできるが、コメント投稿欄は表示されない' do
+    #トップページに遷移
+    visit root_path
+    #アプリ詳細ページに遷移
+    visit app_path(@app)
+    #詳細ページにアプリの内容が含まれている
+    expect(page).to have_content(@app.name)
+    expect(page).to have_content(@app.description)
+    expect(page).to have_content(@app.point)
+    expect(page).to have_content(@app.period)
+    expect(page).to have_content(@app.language)
+    expect(page).to have_content(@app.reference)
+    #コメント用のフォームが存在する
+    expect(page).to have_no_selector('.post_review_container')
+  end
+end
