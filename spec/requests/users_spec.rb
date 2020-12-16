@@ -94,7 +94,7 @@ RSpec.describe 'Users', type: :request do
       expect(response.body).to include(@user.name)
     end
     it 'ユーザーのプロフィール画像が存在することを確認' do
-      expect(response.body).to include("youtube.png")
+      expect(response.body).to include('youtube.png')
     end
     it 'ユーザーのプロフィール文が存在することを確認' do
       expect(response.body).to include(@user.profile)
@@ -147,7 +147,6 @@ RSpec.describe 'Users', type: :request do
       it '更新が表示されることを確認' do
         expect(response.body).to include('更新')
       end
-
     end
     context 'ログインしていない場合' do
       it 'ページ遷移すると、ログインページへリダイレクトすることを確認' do

@@ -29,41 +29,41 @@ RSpec.describe 'Favorites', type: :request do
         sign_in(@user)
       end
       it '投稿にお気に入り登録ができることを確認' do
-        expect{
+        expect do
           post "/favorites/#{@app.id}/create"
-        }.to change{ Favorite.count }.by(1)
+        end.to change { Favorite.count }.by(1)
       end
       it '投稿にajaxによるお気に入り登録ができることを確認' do
-        expect {
+        expect do
           post "/favorites/#{@app.id}/create", xhr: true
-        }.to change{ Favorite.count }.by(1)
+        end.to change { Favorite.count }.by(1)
       end
       it '投稿のお気に入り解除ができることを確認' do
         @user.favorite(@app)
-        expect{
+        expect do
           delete "/favorites/#{@app.id}/destroy"
-        }.to change{ Favorite.count }.by(-1)
+        end.to change { Favorite.count }.by(-1)
       end
       it '投稿にajaxによるお気に入り解除ができることを確認' do
         @user.favorite(@app)
-        expect{
+        expect do
           delete "/favorites/#{@app.id}/destroy", xhr: true
-        }.to change{ Favorite.count }.by(-1)
+        end.to change { Favorite.count }.by(-1)
       end
     end
-    
+
     context 'ログインしてない場合' do
       it 'お気に入り登録はできず、ログインページへリダイレクトすることを確認' do
-        expect {
+        expect do
           post "/favorites/#{@app.id}/create"
-        }.not_to change { Favorite.count }
+        end.not_to change { Favorite.count }
         expect(response).to redirect_to new_user_session_path
       end
 
       it 'お気に入り解除はできず、ログインページへリダイレクトすることを確認' do
-        expect {
+        expect do
           delete "/favorites/#{@app.id}/destroy"
-        }.not_to change { Favorite.count }
+        end.not_to change { Favorite.count }
         expect(response).to redirect_to new_user_session_path
       end
     end
