@@ -37,7 +37,7 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordが空では登録できない' do
-        @user.password_confirmation = ""
+        @user.password_confirmation = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
@@ -47,7 +47,7 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include('スクールは1以外の値にしてください')
       end
       it 'profileが200文字以上では登録できない' do
-        @user.profile = "a" * 201
+        @user.profile = 'a' * 201
         @user.valid?
         expect(@user.errors.full_messages).to include('プロフィールは200文字以内で入力してください')
       end

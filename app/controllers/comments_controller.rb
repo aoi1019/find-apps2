@@ -16,7 +16,7 @@ class CommentsController < ApplicationController
       flash[:alert] = 'コメントは1文字以上140文字以内で入力してください！'
     end
   end
-  
+
   def destroy
     @comment = Comment.find(params[:app_id])
     @app = @comment.app
