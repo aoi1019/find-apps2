@@ -82,7 +82,7 @@ RSpec.describe 'アプリ編集', type: :system do
         find('#app-period').value
       ).to eq '10'
       # アプリ編集する
-      fill_in 'app-text', with: @app1.name + 'あ'
+      fill_in 'app-text', with: "#{@app1.name}あ"
       fill_in 'app-description', with: @app1.description
       fill_in 'app-language', with: @app1.language
       fill_in 'app-point', with: @app1.point
@@ -95,7 +95,7 @@ RSpec.describe 'アプリ編集', type: :system do
       # トップページに遷移することを確認
       expect(current_path).to eq root_path
       # 編集した内容を確認
-      expect(page).to have_content(@app1.name + 'あ')
+      expect(page).to have_content("#{@app1.name}あ")
     end
   end
 
