@@ -178,12 +178,3 @@
 
 
 [![Image from Gyazo](https://i.gyazo.com/05a15461a0d2b64a424e9b3a8bf64018.png)](https://gyazo.com/05a15461a0d2b64a424e9b3a8bf64018)
-
-
-
-# 📌 SNS
-- [» Twitterはこちら](https://twitter.com/aoi_programming)
-- [» Qiitaはこちら](https://qiita.com/aoi1019m)
-- [» BLOGはこちら](https://tech.aoiblog.net)
-- [» Affiliate Siteはこちら](https://aoiblog.net)
-- [» GitHubはこちら](https://github.com/aoi1019/)
