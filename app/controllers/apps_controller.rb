@@ -40,6 +40,7 @@ class AppsController < ApplicationController
       render :edit
     end
   end
+  
 
   def destroy
     @app.destroy
