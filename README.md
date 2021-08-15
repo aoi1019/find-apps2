@@ -1,9 +1,6 @@
 # 📌 Find Apps
 個人規模のオリジナルアプリをシェアするサービスです。
 
-※こちらは前回のサービスのリメイク版です。<br>
-【前回のGitHubリポジトリ】https://github.com/aoi1019/find-apps
-
 独自ドメインで公開中です。（追加実装中）<br>
 **https://find-apps.net/**
 
